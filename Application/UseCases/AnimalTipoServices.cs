@@ -35,4 +35,14 @@ public class AnimalTipoServices : IAnimalTipoService
             AnimalRazaId = animalTipo.AnimalRazaId
         });
     }
+    public async Task<AnimalTipo> GetAnimalTipoById(int id)
+    {
+        return await _animalTipoquery.GetAnimalTipoById(id);
+    }
+
+    public async Task<List<AnimalTipo>> GetListAnimalTipo()
+    {
+        var animalTipos = await _animalTipoquery.GetListAnimalTipo();
+        return animalTipos;
+    }
 }

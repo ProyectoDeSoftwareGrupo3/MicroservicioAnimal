@@ -20,11 +20,12 @@ public class AnimalTipoQuery : IAnimalTipoQuery
     {
         try
             {
-                return await _context.AnimalesTipos.SingleOrDefaultAsync(ar => ar.Id == id);
+                return _context.AnimalesTipos.FirstOrDefault(at => at.Id == id);
+                // return await _context.AnimalesTipos.SingleOrDefaultAsync(ar => ar.Id == id);
             }
         catch (DbException)
             {
-                throw new Conflict("Hubo un error en la busqueda de la raza");
+                throw new Conflict("Hubo un error en la busqueda del tipo");
             }
     }
 
@@ -36,7 +37,7 @@ public class AnimalTipoQuery : IAnimalTipoQuery
             }
         catch (Exception)
             {
-                throw new Conflict("Hubo un error en la busqueda de la lista de razas");
+                throw new Conflict("Hubo un error en la busqueda de la lista de tipos");
             }
     }
 }

@@ -11,6 +11,6 @@ namespace Domain.Entities
         public int Id {  get; set; }
         public string Descripcion { get; set; }    
 
-        public AnimalTipo Tipo { get; set; }
+        public IList<AnimalTipo> Tipos { get; set; }
     }
 }

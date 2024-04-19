@@ -37,7 +37,7 @@ namespace Infrastructure.Persistence
                 entity.Property(ar =>ar.Id).ValueGeneratedOnAdd();
                 entity.Property(ar => ar.Descripcion).IsRequired();
 
-                entity.HasOne(ar => ar.Tipo)
+                entity.HasMany(ar => ar.Tipos)
                 .WithOne(at => at.Raza);
             });
             modelBuilder.Entity<AnimalTipo>(entity =>
@@ -47,9 +47,9 @@ namespace Infrastructure.Persistence
                 entity.Property(at => at.Id).ValueGeneratedOnAdd();
                 entity.Property(at => at.Descripcion).IsRequired();
 
-                entity.HasOne(at => at.Raza)
-                .WithOne(ar => ar.Tipo)
-                .HasForeignKey<AnimalTipo>(at => at.AnimalRazaId).IsRequired();
+                entity.HasOne<AnimalRaza>(at => at.Raza)
+                .WithMany(ar => ar.Tipos)
+                .HasForeignKey(at => at.AnimalRazaId).IsRequired();
                 
             });
 
