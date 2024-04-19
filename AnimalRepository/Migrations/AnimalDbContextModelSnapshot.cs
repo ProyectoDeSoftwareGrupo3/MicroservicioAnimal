@@ -40,8 +40,8 @@ namespace AnimalRepository.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("int");
 
-                    b.Property<Guid>("GaleriaId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("GaleriaId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Genero")
                         .IsRequired()
@@ -75,9 +75,15 @@ namespace AnimalRepository.Migrations
 
             modelBuilder.Entity("Domain.Entities.AnimalGaleria", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -131,8 +137,8 @@ namespace AnimalRepository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<Guid>("GaleriaId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("GaleriaId")
+                        .HasColumnType("int");
 
                     b.Property<string>("url")
                         .IsRequired()

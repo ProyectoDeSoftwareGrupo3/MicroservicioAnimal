@@ -11,7 +11,7 @@ namespace Domain.Entities
         public Guid Id { get; set; }
         public int AnimalTipoId { get; set; }
         public Guid UsuarioId { get; set; }
-        public Guid GaleriaId { get; set; }
+        public int GaleriaId { get; set; }
         public string Nombre { get; set; }
         public string Genero { get; set; }
         public int Edad {  get; set; }

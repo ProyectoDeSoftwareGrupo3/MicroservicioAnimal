@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Interfaces\IAnimal\" />
+    <Folder Include="Interfaces\IFoto\" />
   </ItemGroup>
 
   <ItemGroup>

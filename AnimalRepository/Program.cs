@@ -1,7 +1,9 @@
 using Application;
+using Application.Interfaces.IAnimalGaleria;
 using Application.Interfaces.IAnimalRaza;
 using Application.Interfaces.IAnimalTipo;
 using Application.UseCases;
+using Infrastructure;
 using Infrastructure.Command;
 using Infrastructure.Persistence;
 using Infrastructure.Query;
@@ -28,6 +30,10 @@ builder.Services.AddScoped<IAnimalRazaService, AnimalRazaService>();
 builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
 builder.Services.AddScoped<IAnimalTipoCommand, AnimalTipoCommand>();
 builder.Services.AddScoped<IAnimalTipoService, AnimalTipoServices>();
+
+builder.Services.AddScoped<IAnimalGaleriaQuery, AnimalGaleriaQuery>();
+builder.Services.AddScoped<IAnimalGaleriaCommand, AnimalGaleriaCommand>();
+builder.Services.AddScoped<IAnimalGaleriaServices, AnimalGaleriaServices>();
 
 
 var app = builder.Build();

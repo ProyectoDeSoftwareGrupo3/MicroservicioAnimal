@@ -14,6 +14,7 @@ namespace Infrastructure.Persistence
         public DbSet<AnimalGaleria> AnimalesGalerias {  get; set; }
         public DbSet<AnimalRaza> AnimalesRazas { get; set; }
         public DbSet<AnimalTipo> AnimalesTipos {  get; set; }
+        public DbSet<Foto> Fotos {get;set;}
         
         public AnimalDbContext(DbContextOptions<AnimalDbContext> options) : base(options) { }
 
@@ -24,6 +25,7 @@ namespace Infrastructure.Persistence
                 entity.ToTable("AnimalGaleria");
                 entity.HasKey(ag => ag.Id);
                 entity.Property(ag => ag.Id).ValueGeneratedOnAdd();
+                entity.Property(ag => ag.Descripcion).IsRequired();
 
                 entity.HasOne(ag => ag.Animal)
                 .WithOne(ag => ag.Galeria);
@@ -35,6 +37,7 @@ namespace Infrastructure.Persistence
                 entity.ToTable("Foto");
                 entity.HasKey(f => f.Id);
                 entity.Property(f => f.Id).ValueGeneratedOnAdd();
+                entity.Property(f => f.url).IsRequired();
 
                 entity.HasOne<AnimalGaleria>(f => f.Galeria)
                 .WithMany(g => g.Fotos)
