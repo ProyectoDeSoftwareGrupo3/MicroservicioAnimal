@@ -35,6 +35,16 @@ public class AnimalGaleriaServices : IAnimalGaleriaServices
             Descripcion = animalGaleria.Descripcion
         });
     }
+    public async Task<CreateAnimalGaleriaResponse> UpdateAnimalGaleria(UpdateAnimalGaleriaRequest request)
+    {
+        var result = await _animalGaleriaCommand.UpdateAnimalGaleria(request);
+        return await GetCreateAnimalGaleriaResponse(result);
+    }
+    public async Task<CreateAnimalGaleriaResponse> DeleteAnimalGaleria(DeleteAnimalGaleriaRequest request)
+    {
+        var result = await _animalGaleriaCommand.DeleteAnimalGaleria(request);
+        return await GetCreateAnimalGaleriaResponse(result);
+    }
 
     public Task<AnimalGaleria> GetAnimalGaleriaById(int id)
     {

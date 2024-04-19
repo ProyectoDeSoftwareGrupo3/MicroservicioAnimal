@@ -1,4 +1,6 @@
-﻿using Application.Exceptions;
+﻿using System.Data.Common;
+using Application;
+using Application.Exceptions;
 using Application.Interfaces.IAnimalGaleria;
 using Domain.Entities;
 using Infrastructure.Persistence;
@@ -24,6 +26,35 @@ public class AnimalGaleriaCommand : IAnimalGaleriaCommand
             return animalGaleria;
         }
         catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
+
+    public Task<AnimalGaleria> DeleteAnimalGaleria(DeleteAnimalGaleriaRequest requests)
+    {
+        try
+        {
+            var animalGaleriaDeleted = _context.AnimalesGalerias.FirstOrDefault(ag => ag.Id == requests.Id);
+            _context.AnimalesGalerias.Remove(animalGaleriaDeleted);
+            _context.SaveChanges();
+            return Task.FromResult(new AnimalGaleria());
+        }
+        catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
+
+    public Task<AnimalGaleria> UpdateAnimalGaleria(UpdateAnimalGaleriaRequest request)
+    {
+        try{
+            var animalGaleriaUpdated = _context.AnimalesGalerias.FirstOrDefault(ag => ag.Id == request.Id);
+            animalGaleriaUpdated.Descripcion = request.Descripcion;
+            _context.SaveChanges();
+            return Task.FromResult(animalGaleriaUpdated);
+        }
+        catch (DbException)
         {
             throw new Conflict("Error en la base de datos");
         }

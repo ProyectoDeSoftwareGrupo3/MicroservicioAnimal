@@ -1,5 +1,6 @@
 ﻿using Application.Exceptions;
 using Application.Interfaces.IAnimalTipo;
+using Application.Request;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,28 @@ public class AnimalTipoCommand : IAnimalTipoCommand
                 return animalTipo;
         }
         catch(DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
+
+    public Task<AnimalTipo> DeleteAnimalTipo(DeleteAnimalTipoRequest request)
+    {
+        var animalTipoDeleted =  _context.AnimalesTipos.FirstOrDefault(at => at.Id == request.Id);
+        _context.AnimalesTipos.Remove(animalTipoDeleted);
+        _context.SaveChanges();
+        return Task.FromResult(new AnimalTipo());
+    }
+
+    public Task<AnimalTipo> UpdateAnimalTipo(UpdateAnimalTipoRequest request)
+    {
+        try{
+            var animalTipoUpdated = _context.AnimalesTipos.FirstOrDefault(at => at.Id == request.Id);
+            animalTipoUpdated.Descripcion = request.Descripcion;
+            _context.SaveChanges();
+            return Task.FromResult(animalTipoUpdated);
+        }
+        catch (DbUpdateException)
         {
             throw new Conflict("Error en la base de datos");
         }

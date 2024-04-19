@@ -32,6 +32,32 @@ public class AnimalTipoController : ControllerBase
             throw;
         }
     }
+    [HttpPatch]
+    public async Task<IActionResult>UpdateAnimalTipo(UpdateAnimalTipoRequest request)
+    {
+        try
+        {
+            var result = _animalTipoService.UpdateAnimalTipo(request);
+            return new JsonResult(result) {StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpDelete]
+    public async Task<IActionResult>DeleteAnimalTipo(DeleteAnimalTipoRequest request)
+    {
+        try
+        {
+            var result = _animalTipoService.DeleteAnimalTipo(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
     [HttpGet("{id}")]
     public async Task<IActionResult>GetAnimalTipoById(int id)
     {
@@ -45,7 +71,6 @@ public class AnimalTipoController : ControllerBase
             throw;
         }
     }
-
     [HttpGet]
     public async Task<IActionResult>GetListAnimalTipo()
     {

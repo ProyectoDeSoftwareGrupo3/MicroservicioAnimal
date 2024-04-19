@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.IAnimalGaleria;
+﻿using Application;
+using Application.Interfaces.IAnimalGaleria;
 using Application.Request;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,32 @@ public class AnimalGaleriaController : ControllerBase
         try
         {
             var result = _animalGaleriaServices.CreateAnimalGaleria(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpPatch]
+    public async Task<IActionResult> UpdateAnimalGaleria(UpdateAnimalGaleriaRequest request)
+    {
+        try
+        {
+            var result = _animalGaleriaServices.UpdateAnimalGaleria(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpDelete]
+    public async Task<IActionResult> DeleteAnimalGaleria(DeleteAnimalGaleriaRequest request)
+    {
+        try
+        {
+            var result = _animalGaleriaServices.DeleteAnimalGaleria(request);
             return new JsonResult(result){StatusCode = 201};
         }
         catch (Exception)

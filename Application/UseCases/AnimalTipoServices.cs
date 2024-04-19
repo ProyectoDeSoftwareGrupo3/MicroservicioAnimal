@@ -33,6 +33,17 @@ public class AnimalTipoServices : IAnimalTipoService
             Descripcion = animalTipo.Descripcion,
         });
     }
+    public async Task<CreateAnimalTipoResponse> DeleteAnimalTipo(DeleteAnimalTipoRequest request)
+    {
+        var empty = await _animalTipocommand.DeleteAnimalTipo(request);
+        return await GetCreateAnimalTipoResponse(empty);
+    }
+
+    public async Task<CreateAnimalTipoResponse> UpdateAnimalTipo(UpdateAnimalTipoRequest request)
+    {
+        var animalTipoUpdated = await _animalTipocommand.UpdateAnimalTipo(request);
+        return await GetCreateAnimalTipoResponse(animalTipoUpdated);
+    }
     public async Task<AnimalTipo> GetAnimalTipoById(int id)
     {
         return await _animalTipoquery.GetAnimalTipoById(id);
@@ -43,4 +54,6 @@ public class AnimalTipoServices : IAnimalTipoService
         var animalTipos = await _animalTipoquery.GetListAnimalTipo();
         return animalTipos;
     }
+
+
 }

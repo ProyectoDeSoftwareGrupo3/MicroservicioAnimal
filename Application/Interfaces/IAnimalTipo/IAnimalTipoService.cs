@@ -8,4 +8,6 @@ public interface IAnimalTipoService
     Task<CreateAnimalTipoResponse> CreateAnimalTipo(CreateAnimalTipoRequest request);
     Task<List<AnimalTipo>> GetListAnimalTipo();
     Task<AnimalTipo>GetAnimalTipoById(int id);
+    Task<CreateAnimalTipoResponse> DeleteAnimalTipo(DeleteAnimalTipoRequest request);
+    Task<CreateAnimalTipoResponse> UpdateAnimalTipo(UpdateAnimalTipoRequest request);
 }
