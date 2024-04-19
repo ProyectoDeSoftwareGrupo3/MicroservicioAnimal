@@ -1,4 +1,8 @@
+using Application.Interfaces.IAnimalRaza;
+using Application.UseCases;
+using Infrastructure.Command;
 using Infrastructure.Persistence;
+using Infrastructure.Query;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,11 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration["ConnectionString"];
 
 builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
+
+
+builder.Services.AddScoped<IAnimalRazaQuery, AnimalRazaQuery>();
+builder.Services.AddScoped<IAnimalRazaCommand,AnimalRazaCommand>();
+builder.Services.AddScoped<IAnimalRazaService, AnimalRazaService>();
 
 var app = builder.Build();
 

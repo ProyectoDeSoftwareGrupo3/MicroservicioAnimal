@@ -140,3 +140,4 @@ C:\Users\diego\source\repos\AnimalRepository\AnimalRepository\obj\Debug\net8.0\r
 C:\Users\diego\source\repos\AnimalRepository\AnimalRepository\obj\Debug\net8.0\AnimalRepository.pdb
 C:\Users\diego\source\repos\AnimalRepository\AnimalRepository\obj\Debug\net8.0\AnimalRepository.genruntimeconfig.cache
 C:\Users\diego\source\repos\AnimalRepository\AnimalRepository\obj\Debug\net8.0\ref\AnimalRepository.dll
+C:\Users\diego\source\repos\AnimalRepository\AnimalRepository\obj\Debug\net8.0\AnimalRepository.sourcelink.json

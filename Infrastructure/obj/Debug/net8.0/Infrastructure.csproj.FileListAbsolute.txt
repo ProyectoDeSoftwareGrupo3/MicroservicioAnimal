@@ -17,3 +17,4 @@ C:\Users\diego\source\repos\AnimalRepository\Infrastructure\obj\Debug\net8.0\ref
 C:\Users\diego\source\repos\AnimalRepository\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\diego\source\repos\AnimalRepository\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 C:\Users\diego\source\repos\AnimalRepository\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\diego\source\repos\AnimalRepository\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
