@@ -21,7 +21,6 @@ public class AnimalTipoQuery : IAnimalTipoQuery
         try
             {
                 return _context.AnimalesTipos.FirstOrDefault(at => at.Id == id);
-                // return await _context.AnimalesTipos.SingleOrDefaultAsync(ar => ar.Id == id);
             }
         catch (DbException)
             {
