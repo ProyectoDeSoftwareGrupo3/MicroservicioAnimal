@@ -20,7 +20,6 @@ public class AnimalTipoServices : IAnimalTipoService
     {
         var animalTipo = new AnimalTipo
         {
-            AnimalRazaId = request.AnimalRazaId,
             Descripcion = request.Descripcion
         };
         var animalTipoCreated = _animalTipocommand.CreateAnimalTipo(animalTipo);
@@ -32,7 +31,6 @@ public class AnimalTipoServices : IAnimalTipoService
         {
             id = animalTipo.Id,
             Descripcion = animalTipo.Descripcion,
-            AnimalRazaId = animalTipo.AnimalRazaId
         });
     }
     public async Task<AnimalTipo> GetAnimalTipoById(int id)

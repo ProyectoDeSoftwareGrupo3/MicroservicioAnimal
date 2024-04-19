@@ -9,9 +9,8 @@ namespace Domain.Entities
     public class AnimalGaleria
     {
         public Guid Id { get; set; }
-        public string Foto { get; set; }
+        public List<Foto> Fotos { get; set; }
 
-        public List <Animal> Animales { get; set; }
-
+        public Animal Animal { get; set; }
     }
 }

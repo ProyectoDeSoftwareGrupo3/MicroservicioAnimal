@@ -4,6 +4,7 @@ using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimalRepository.Migrations
 {
     [DbContext(typeof(AnimalDbContext))]
-    partial class AnimalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240419142528_Fotos")]
+    partial class Fotos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,12 +99,7 @@ namespace AnimalRepository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TipoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TipoId");
 
                     b.ToTable("AnimalRaza", (string)null);
                 });
@@ -114,11 +112,16 @@ namespace AnimalRepository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AnimalRazaId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AnimalRazaId");
 
                     b.ToTable("AnimalTipo", (string)null);
                 });
@@ -164,15 +167,15 @@ namespace AnimalRepository.Migrations
                     b.Navigation("Tipo");
                 });
 
-            modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>
+            modelBuilder.Entity("Domain.Entities.AnimalTipo", b =>
                 {
-                    b.HasOne("Domain.Entities.AnimalTipo", "Tipo")
-                        .WithMany("Razas")
-                        .HasForeignKey("TipoId")
+                    b.HasOne("Domain.Entities.AnimalRaza", "Raza")
+                        .WithMany("Tipos")
+                        .HasForeignKey("AnimalRazaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Tipo");
+                    b.Navigation("Raza");
                 });
 
             modelBuilder.Entity("Domain.Entities.Foto", b =>
@@ -194,11 +197,14 @@ namespace AnimalRepository.Migrations
                     b.Navigation("Fotos");
                 });
 
+            modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>
+                {
+                    b.Navigation("Tipos");
+                });
+
             modelBuilder.Entity("Domain.Entities.AnimalTipo", b =>
                 {
                     b.Navigation("Animales");
-
-                    b.Navigation("Razas");
                 });
 #pragma warning restore 612, 618
         }

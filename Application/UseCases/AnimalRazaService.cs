@@ -25,6 +25,7 @@ namespace Application.UseCases
         {
             var animalRaza = new AnimalRaza
             {
+                TipoId = request.TipoId,
                 Descripcion = request.Descripcion
             };
 
@@ -38,8 +39,9 @@ namespace Application.UseCases
         {
             return Task.FromResult(new CreateAnimalRazaResponse
             {
-                Descripcion = animalRaza.Descripcion,
-                Id = animalRaza.Id
+                Id = animalRaza.Id,
+                TipoId = animalRaza.TipoId,
+                Descripcion = animalRaza.Descripcion
             });
         }
     }
