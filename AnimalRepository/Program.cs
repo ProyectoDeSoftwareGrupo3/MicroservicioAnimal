@@ -1,4 +1,6 @@
+using Application;
 using Application.Interfaces.IAnimalRaza;
+using Application.Interfaces.IAnimalTipo;
 using Application.UseCases;
 using Infrastructure.Command;
 using Infrastructure.Persistence;
@@ -22,6 +24,11 @@ builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(c
 builder.Services.AddScoped<IAnimalRazaQuery, AnimalRazaQuery>();
 builder.Services.AddScoped<IAnimalRazaCommand,AnimalRazaCommand>();
 builder.Services.AddScoped<IAnimalRazaService, AnimalRazaService>();
+
+builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
+builder.Services.AddScoped<IAnimalTipoCommand, AnimalTipoCommand>();
+builder.Services.AddScoped<IAnimalTipoService, AnimalTipoServices>();
+
 
 var app = builder.Build();
 

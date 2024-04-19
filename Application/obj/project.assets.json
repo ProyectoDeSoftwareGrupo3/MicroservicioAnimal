@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\diego\\.nuget\\packages\\": {}
+    "C:\\Users\\Pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
+      "projectUniqueName": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\obj\\",
+      "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj"
+            "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj": {
+              "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj"
             }
           }
         }
@@ -89,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
