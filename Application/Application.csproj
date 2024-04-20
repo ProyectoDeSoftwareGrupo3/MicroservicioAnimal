@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\IAnimal\" />
     <Folder Include="Request\AnimalRazaRequests\" />
     <Folder Include="Request\AnimalTipoRequests\" />
-    <Folder Include="Request\FotoRequests\" />
   </ItemGroup>
 
   <ItemGroup>

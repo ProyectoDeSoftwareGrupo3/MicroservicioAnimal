@@ -1,4 +1,5 @@
 ﻿using Application.Interfaces.IFoto;
+using Application.Request;
 using Domain.Entities;
 
 namespace Application.UseCases;
@@ -32,6 +33,16 @@ public class FotoServices : IFotoServices
             url = foto.url,
             GaleriaId = foto.GaleriaId
         });
+    }
+    public async Task<CreateFotoResponse> UpdateFoto(UpdateFotoRequest request)
+    {
+        var result = await _fotoCommand.UpdateFoto(request);
+        return await GetCreateFotoResponse(result);
+    }
+    public async Task<CreateFotoResponse> DeleteFoto(DeleteFotoRequest request)
+    {
+        var result = await _fotoCommand.DeleteFoto(request);
+        return await GetCreateFotoResponse(result);
     }
 
     public async Task<Foto> GetFotoById(int id)

@@ -1,4 +1,5 @@
 using Application;
+using Application.Interfaces;
 using Application.Interfaces.IAnimalGaleria;
 using Application.Interfaces.IAnimalRaza;
 using Application.Interfaces.IAnimalTipo;
@@ -23,6 +24,9 @@ var connectionString = builder.Configuration["ConnectionString"];
 
 builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnimalRepository")));
 
+builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
+builder.Services.AddScoped<IAnimalCommand, AnimalCommand>();
+builder.Services.AddScoped<IAnimalServices, AnimalServices>();
 
 builder.Services.AddScoped<IAnimalRazaQuery, AnimalRazaQuery>();
 builder.Services.AddScoped<IAnimalRazaCommand,AnimalRazaCommand>();

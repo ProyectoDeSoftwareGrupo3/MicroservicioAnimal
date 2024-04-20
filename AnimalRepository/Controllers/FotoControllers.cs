@@ -1,5 +1,6 @@
 ﻿using Application;
 using Application.Interfaces.IFoto;
+using Application.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository.Controllers;
@@ -20,6 +21,32 @@ public class FotoControllers : ControllerBase
         try
         {
             var result = _fotoServices.CreateFoto(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpPatch]
+    public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
+    {
+        try
+        {
+            var result = _fotoServices.UpdateFoto(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpDelete]
+    public async Task<IActionResult> DeleteFoto(DeleteFotoRequest request)
+    {
+        try
+        {
+            var result = _fotoServices.DeleteFoto(request);
             return new JsonResult(result){StatusCode = 201};
         }
         catch (Exception)
