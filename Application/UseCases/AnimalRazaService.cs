@@ -34,6 +34,26 @@ namespace Application.UseCases
             
         }
 
+        public async Task<CreateAnimalRazaResponse> DeleteAnimalRaza(DeleteAnimalRazaRequest request)
+        {
+            var animalRazaDeleted = await _animalRazaCommand.DeleteAnimalRaza(request);
+            return await GetCreateAnimalRazaResponse(animalRazaDeleted);
+        }
+
+        public async Task<CreateAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request)
+        {
+            var animalRazaUpdated = await _animalRazaCommand.UpdateAnimalRaza(request);
+        return await GetCreateAnimalRazaResponse(animalRazaUpdated);
+        }
+        public async Task<AnimalRaza> GetAnimalRazaById(int id)
+        {
+            return await _animalRazaQuery.GetAnimalRazaById(id);
+        }
+
+        public async Task<List<AnimalRaza>> GetListAnimalRaza()
+        {
+            return await _animalRazaQuery.GetListAnimalRaza();
+        }
 
         private Task<CreateAnimalRazaResponse>GetCreateAnimalRazaResponse(AnimalRaza animalRaza)
         {

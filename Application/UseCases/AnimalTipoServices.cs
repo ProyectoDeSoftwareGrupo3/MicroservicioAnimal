@@ -35,8 +35,8 @@ public class AnimalTipoServices : IAnimalTipoService
     }
     public async Task<CreateAnimalTipoResponse> DeleteAnimalTipo(DeleteAnimalTipoRequest request)
     {
-        var empty = await _animalTipocommand.DeleteAnimalTipo(request);
-        return await GetCreateAnimalTipoResponse(empty);
+        var animalTipoDeleted = await _animalTipocommand.DeleteAnimalTipo(request);
+        return await GetCreateAnimalTipoResponse(animalTipoDeleted);
     }
 
     public async Task<CreateAnimalTipoResponse> UpdateAnimalTipo(UpdateAnimalTipoRequest request)

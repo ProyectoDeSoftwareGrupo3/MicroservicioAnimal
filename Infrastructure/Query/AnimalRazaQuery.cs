@@ -25,13 +25,13 @@ namespace Infrastructure.Query
         public async Task<AnimalRaza> GetAnimalRazaById(int id)
         {
             try
-            {
-                return await _context.AnimalesRazas.SingleOrDefaultAsync(ar => ar.Id == id);
-            }
+                {
+                    return _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == id);
+                }
             catch (DbException)
-            {
-                throw new Conflict("Hubo un error en la busqueda de la raza");
-            }
+                {
+                    throw new Conflict("Hubo un error en la busqueda de la raza");
+                }
 
         }
 

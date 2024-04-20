@@ -31,5 +31,57 @@ namespace AnimalRepository.Controllers
                 throw;
             }
         }
+        [HttpPatch]
+        public async Task<IActionResult>UpdateAnimalRaza(UpdateAnimalRazaRequest request)
+        {
+            try
+            {
+                var result = _animalRazaService.UpdateAnimalRaza(request);
+                return new JsonResult(result) {StatusCode = 201};
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        [HttpDelete]
+        public async Task<IActionResult>DeleteAnimalRaza(DeleteAnimalRazaRequest request)
+        {
+            try
+            {
+                var result = _animalRazaService.DeleteAnimalRaza(request);
+                return new JsonResult(result){StatusCode = 201};
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult>GetAnimalRazaById(int id)
+        {
+            try
+            {
+                var animalRaza = _animalRazaService.GetAnimalRazaById(id);
+                return new JsonResult(animalRaza){StatusCode = 201};
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult>GetListAnimalRaza()
+        {
+            try
+            {
+                var result = await _animalRazaService.GetListAnimalRaza();
+                return new JsonResult(result){StatusCode = 201};
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

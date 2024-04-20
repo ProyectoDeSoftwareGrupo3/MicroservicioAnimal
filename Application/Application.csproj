@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Request\AnimalRazaRequests\" />
     <Folder Include="Request\AnimalTipoRequests\" />
   </ItemGroup>
 

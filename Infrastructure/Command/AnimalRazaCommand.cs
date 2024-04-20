@@ -1,5 +1,6 @@
 ﻿using Application.Exceptions;
 using Application.Interfaces.IAnimalRaza;
+using Application.Request;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -33,6 +34,38 @@ namespace Infrastructure.Command
             catch (DbUpdateException)
             {
 
+                throw new Conflict("Error en la base de datos");
+            }
+        }
+
+        public Task<AnimalRaza> DeleteAnimalRaza(DeleteAnimalRazaRequest request)
+        {
+            try
+            {
+                var animalRazaDeleted = _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == request.Id);
+                _context.AnimalesRazas.Remove(animalRazaDeleted);
+                _context.SaveChanges();
+                return Task.FromResult(new AnimalRaza());
+            }
+            catch (DbUpdateException)
+            {
+
+                throw new Conflict("Error en la base de datos");
+            }
+        }
+
+        public Task<AnimalRaza> UpdateAnimalRaza(UpdateAnimalRazaRequest request)
+        {
+            try
+            {
+                var animalRazaUpdated = _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == request.Id);
+                animalRazaUpdated.TipoId = request.TipoId;
+                animalRazaUpdated.Descripcion = request.Descripcion;
+                _context.SaveChanges();
+                return Task.FromResult(animalRazaUpdated);
+            }
+            catch (DbException)
+            {
                 throw new Conflict("Error en la base de datos");
             }
         }
