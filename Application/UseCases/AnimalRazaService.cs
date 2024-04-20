@@ -25,6 +25,7 @@ namespace Application.UseCases
         {
             var animalRaza = new AnimalRaza
             {
+                TipoId = request.TipoId,
                 Descripcion = request.Descripcion
             };
 
@@ -33,13 +34,34 @@ namespace Application.UseCases
             
         }
 
+        public async Task<CreateAnimalRazaResponse> DeleteAnimalRaza(DeleteAnimalRazaRequest request)
+        {
+            var animalRazaDeleted = await _animalRazaCommand.DeleteAnimalRaza(request);
+            return await GetCreateAnimalRazaResponse(animalRazaDeleted);
+        }
+
+        public async Task<CreateAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request)
+        {
+            var animalRazaUpdated = await _animalRazaCommand.UpdateAnimalRaza(request);
+        return await GetCreateAnimalRazaResponse(animalRazaUpdated);
+        }
+        public async Task<AnimalRaza> GetAnimalRazaById(int id)
+        {
+            return await _animalRazaQuery.GetAnimalRazaById(id);
+        }
+
+        public async Task<List<AnimalRaza>> GetListAnimalRaza()
+        {
+            return await _animalRazaQuery.GetListAnimalRaza();
+        }
 
         private Task<CreateAnimalRazaResponse>GetCreateAnimalRazaResponse(AnimalRaza animalRaza)
         {
             return Task.FromResult(new CreateAnimalRazaResponse
             {
-                Descripcion = animalRaza.Descripcion,
-                Id = animalRaza.Id
+                Id = animalRaza.Id,
+                TipoId = animalRaza.TipoId,
+                Descripcion = animalRaza.Descripcion
             });
         }
     }

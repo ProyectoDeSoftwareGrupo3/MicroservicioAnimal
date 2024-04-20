@@ -9,10 +9,9 @@ namespace Domain.Entities
     public class AnimalTipo
     {
         public int Id { get; set; }
-        public int AnimalRazaId { get; set; }
         public string Descripcion { get; set; }
 
-        public AnimalRaza Raza { get; set;}
+        public List<AnimalRaza> Razas { get; set;}
         public List<Animal> Animales { get; set; }
     }
 }

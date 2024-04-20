@@ -14,6 +14,7 @@ namespace Infrastructure.Persistence
         public DbSet<AnimalGaleria> AnimalesGalerias {  get; set; }
         public DbSet<AnimalRaza> AnimalesRazas { get; set; }
         public DbSet<AnimalTipo> AnimalesTipos {  get; set; }
+        public DbSet<Foto> Fotos {get;set;}
         
         public AnimalDbContext(DbContextOptions<AnimalDbContext> options) : base(options) { }
 
@@ -24,10 +25,24 @@ namespace Infrastructure.Persistence
                 entity.ToTable("AnimalGaleria");
                 entity.HasKey(ag => ag.Id);
                 entity.Property(ag => ag.Id).ValueGeneratedOnAdd();
-                entity.Property(ag => ag.Foto).IsRequired();
+                entity.Property(ag => ag.Descripcion).IsRequired();
 
-                entity.HasMany(ag => ag.Animales)
+                entity.HasOne(ag => ag.Animal)
                 .WithOne(ag => ag.Galeria);
+
+                entity.HasMany<Foto>(f => f.Fotos)
+                .WithOne(ag => ag.Galeria);
+            });
+            modelBuilder.Entity<Foto>(entity =>{
+                entity.ToTable("Foto");
+                entity.HasKey(f => f.Id);
+                entity.Property(f => f.Id).ValueGeneratedOnAdd();
+                entity.Property(f => f.url).IsRequired();
+
+                entity.HasOne<AnimalGaleria>(f => f.Galeria)
+                .WithMany(g => g.Fotos)
+                .HasForeignKey(g => g.GaleriaId);
+
             });
 
             modelBuilder.Entity<AnimalRaza>(entity =>
@@ -37,8 +52,9 @@ namespace Infrastructure.Persistence
                 entity.Property(ar =>ar.Id).ValueGeneratedOnAdd();
                 entity.Property(ar => ar.Descripcion).IsRequired();
 
-                entity.HasOne(ar => ar.Tipo)
-                .WithOne(at => at.Raza);
+                entity.HasOne<AnimalTipo>(ar => ar.Tipo)
+                .WithMany(at => at.Razas)
+                .HasForeignKey(at => at.TipoId);
             });
             modelBuilder.Entity<AnimalTipo>(entity =>
             {
@@ -47,9 +63,8 @@ namespace Infrastructure.Persistence
                 entity.Property(at => at.Id).ValueGeneratedOnAdd();
                 entity.Property(at => at.Descripcion).IsRequired();
 
-                entity.HasOne(at => at.Raza)
-                .WithOne(ar => ar.Tipo)
-                .HasForeignKey<AnimalTipo>(at => at.AnimalRazaId).IsRequired();
+                entity.HasMany(at => at.Razas)
+                .WithOne(ar => ar.Tipo);
                 
             });
 
@@ -68,8 +83,8 @@ namespace Infrastructure.Persistence
                 .HasForeignKey(a => a.AnimalTipoId);
 
                 entity.HasOne(a => a.Galeria)
-                .WithMany(ag => ag.Animales)
-                .HasForeignKey(a => a.GaleriaId);
+                .WithOne(ag => ag.Animal)
+                .HasForeignKey<Animal>(a => a.GaleriaId);
             });
             
             
