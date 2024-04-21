@@ -31,7 +31,7 @@ namespace AnimalRepository.Controllers
                 throw;
             }
         }
-        [HttpPatch]
+        [HttpPut]
         public async Task<IActionResult>UpdateAnimalRaza(UpdateAnimalRazaRequest request)
         {
             try

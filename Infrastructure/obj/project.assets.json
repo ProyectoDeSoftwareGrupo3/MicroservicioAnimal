@@ -4140,19 +4140,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pc\\.nuget\\packages\\": {}
+    "C:\\Users\\diego\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4166,8 +4166,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Application\\Application.csproj": {
-              "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Application\\Application.csproj"
+            "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj"
             }
           }
         }
@@ -4220,7 +4220,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

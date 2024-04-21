@@ -29,7 +29,7 @@ public class AnimalGaleriaController : ControllerBase
             throw;
         }
     }
-    [HttpPatch]
+    [HttpPut]
     public async Task<IActionResult> UpdateAnimalGaleria(UpdateAnimalGaleriaRequest request)
     {
         try

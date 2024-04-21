@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\animalrepository\\controllers\\animalrazacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\controllers\\animalrazacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\animalrepository\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\command\\animalrazacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\command\\animalrazacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,25 +63,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AnimalRazaController.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\Controllers\\AnimalRazaController.cs",
-              "RelativeDocumentMoniker": "AnimalRepository\\Controllers\\AnimalRazaController.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\Controllers\\AnimalRazaController.cs",
-              "RelativeToolTip": "AnimalRepository\\Controllers\\AnimalRazaController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABMAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:54:42.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "AnimalDbContext.cs",
               "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Persistence\\AnimalDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AnimalDbContext.cs",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Persistence\\AnimalDbContext.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\AnimalDbContext.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAADQAAAAAAAAAAAAQwGUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T23:42:15.328Z",
               "EditorCaption": ""
@@ -100,8 +83,7 @@
               "RelativeToolTip": "Application\\UseCases\\AnimalRazaService.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAswCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:36:19.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T23:36:19.779Z"
             },
             {
               "$type": "Document",
@@ -113,8 +95,7 @@
               "RelativeToolTip": "Infrastructure\\Query\\AnimalRazaQuery.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T22:31:27.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T22:31:27.933Z"
             },
             {
               "$type": "Document",
@@ -126,8 +107,7 @@
               "RelativeToolTip": "Infrastructure\\Command\\AnimalRazaCommand.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAqwCMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T21:50:10.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T21:50:10.664Z"
             },
             {
               "$type": "Document",
@@ -137,10 +117,9 @@
               "RelativeDocumentMoniker": "AnimalRepository\\Program.cs",
               "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\Program.cs",
               "RelativeToolTip": "AnimalRepository\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAABEAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T02:59:33.34Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-18T02:59:33.34Z"
             }
           ]
         },

@@ -21,8 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration["ConnectionString"];
-
-builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnimalRepository")));
+builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
 builder.Services.AddScoped<IAnimalCommand, AnimalCommand>();

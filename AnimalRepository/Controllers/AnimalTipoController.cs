@@ -32,7 +32,7 @@ public class AnimalTipoController : ControllerBase
             throw;
         }
     }
-    [HttpPatch]
+    [HttpPut]
     public async Task<IActionResult>UpdateAnimalTipo(UpdateAnimalTipoRequest request)
     {
         try

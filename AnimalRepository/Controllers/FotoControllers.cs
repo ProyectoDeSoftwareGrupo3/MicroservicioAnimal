@@ -28,7 +28,7 @@ public class FotoControllers : ControllerBase
             throw;
         }
     }
-    [HttpPatch]
+    [HttpPut]
     public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
     {
         try

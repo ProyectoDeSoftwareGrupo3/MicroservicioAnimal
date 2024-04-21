@@ -86,6 +86,19 @@ namespace Infrastructure.Persistence
                 .WithOne(ag => ag.Animal)
                 .HasForeignKey<Animal>(a => a.GaleriaId);
             });
+
+            modelBuilder.Entity<AnimalTipo>().HasData(
+                new AnimalTipo
+                {
+                    Id = 1,
+                    Descripcion="Perro"
+                },
+                new AnimalTipo
+                {
+                    Id=2,
+                    Descripcion = "Gato"
+                }
+                );
             
             
         }

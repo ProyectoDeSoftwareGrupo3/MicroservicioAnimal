@@ -1,7 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
+
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
 namespace Infrastructure.Migrations
 {
@@ -15,25 +16,13 @@ namespace Infrastructure.Migrations
                 name: "AnimalGaleria",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Foto = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AnimalGaleria", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "AnimalRaza",
-                columns: table => new
-                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AnimalRaza", x => x.Id);
+                    table.PrimaryKey("PK_AnimalGaleria", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -42,16 +31,29 @@ namespace Infrastructure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AnimalRazaId = table.Column<int>(type: "int", nullable: false),
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AnimalTipo", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Foto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GaleriaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Foto", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AnimalTipo_AnimalRaza_AnimalRazaId",
-                        column: x => x.AnimalRazaId,
-                        principalTable: "AnimalRaza",
+                        name: "FK_Foto_AnimalGaleria_GaleriaId",
+                        column: x => x.GaleriaId,
+                        principalTable: "AnimalGaleria",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -60,10 +62,11 @@ namespace Infrastructure.Migrations
                 name: "Animal",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     AnimalTipoId = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GaleriaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UsuarioId = table.Column<int>(type: "int", nullable: false),
+                    GaleriaId = table.Column<int>(type: "int", nullable: false),
                     Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Genero = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Edad = table.Column<int>(type: "int", maxLength: 50, nullable: false),
@@ -88,6 +91,35 @@ namespace Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "AnimalRaza",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TipoId = table.Column<int>(type: "int", nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AnimalRaza", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_AnimalRaza_AnimalTipo_TipoId",
+                        column: x => x.TipoId,
+                        principalTable: "AnimalTipo",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AnimalTipo",
+                columns: new[] { "Id", "Descripcion" },
+                values: new object[,]
+                {
+                    { 1, "Perro" },
+                    { 2, "Gato" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Animal_AnimalTipoId",
                 table: "Animal",
@@ -96,13 +128,18 @@ namespace Infrastructure.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Animal_GaleriaId",
                 table: "Animal",
-                column: "GaleriaId");
+                column: "GaleriaId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_AnimalTipo_AnimalRazaId",
-                table: "AnimalTipo",
-                column: "AnimalRazaId",
-                unique: true);
+                name: "IX_AnimalRaza_TipoId",
+                table: "AnimalRaza",
+                column: "TipoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Foto_GaleriaId",
+                table: "Foto",
+                column: "GaleriaId");
         }
 
         /// <inheritdoc />
@@ -112,13 +149,16 @@ namespace Infrastructure.Migrations
                 name: "Animal");
 
             migrationBuilder.DropTable(
-                name: "AnimalGaleria");
+                name: "AnimalRaza");
+
+            migrationBuilder.DropTable(
+                name: "Foto");
 
             migrationBuilder.DropTable(
                 name: "AnimalTipo");
 
             migrationBuilder.DropTable(
-                name: "AnimalRaza");
+                name: "AnimalGaleria");
         }
     }
 }

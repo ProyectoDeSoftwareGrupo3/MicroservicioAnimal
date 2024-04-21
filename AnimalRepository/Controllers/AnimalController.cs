@@ -26,7 +26,7 @@ public class AnimalController : ControllerBase
             throw;
         }
     }
-    [HttpPatch]
+    [HttpPut]
     public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request)
     {
         try

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj": {}
+    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj": {
+    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Pc\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Pc\\Desktop\\Uni\\Proyecto_Software\\Proyecto_Grupal\\Repositorios\\MicroservicioAnimal\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
