@@ -19,7 +19,7 @@ public class AnimalController : ControllerBase
         try
         {
             var result = _animalServices.CreateAnimal(request);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
         {
@@ -32,7 +32,7 @@ public class AnimalController : ControllerBase
         try
         {
             var result = _animalServices.UpdateAnimal(request);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
         {
@@ -45,7 +45,7 @@ public class AnimalController : ControllerBase
         try
         {
             var result = _animalServices.DeleteAnimal(request);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
         {
@@ -58,20 +58,60 @@ public class AnimalController : ControllerBase
         try
         {
             var result = await _animalServices.GetListAnimal();
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
         {
             throw;
         }
     }
-    [HttpGet("{id}")]
+    [HttpGet("PorId/{id}")]
     public async Task<IActionResult> GetAnimalById(int id)
     {
         try
         {
             var result = _animalServices.GetAnimalById(id);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result) { StatusCode = 201 };
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+
+    [HttpGet("PorGenero/{genero}")]
+    public async Task<IActionResult> GetByGender(String genero)
+    {
+        try
+        {
+            var result = await _animalServices.GetByGender(genero);
+            return new JsonResult(result) { StatusCode = 201 };
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpGet("PorPeso/{peso}")]
+    public async Task<IActionResult> GetByWeight(decimal peso)
+    {
+        try
+        {
+            var result = await _animalServices.GetByWeight(peso);
+            return new JsonResult(result) { StatusCode = 201 };
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+    [HttpGet("PorEdad/{edad}")]
+    public async Task<IActionResult> GetByAge(int edad)
+    {
+        try
+        {
+            var result = await _animalServices.GetByAge(edad);
+            return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
         {
