@@ -66,11 +66,15 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
@@ -110,8 +114,7 @@
               "RelativeToolTip": "Domain\\Entities\\Animal.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:52:07.019Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T15:52:07.019Z"
             },
             {
               "$type": "Document",
@@ -147,8 +150,7 @@
               "RelativeToolTip": "AnimalRepository\\Controllers\\AnimalController.cs",
               "ViewState": "AQIAAGUAAAAAAAAAAAAAwHcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:22:04.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T00:22:04.213Z"
             },
             {
               "$type": "Document",
@@ -160,8 +162,7 @@
               "RelativeToolTip": "Infrastructure\\Query\\AnimalQuery.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAowEIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:13:08.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T00:13:08.058Z"
             },
             {
               "$type": "Document",
@@ -173,8 +174,7 @@
               "RelativeToolTip": "Application\\UseCases\\AnimalServices.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAcwE4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:08:52.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T00:08:52.53Z"
             },
             {
               "$type": "Document",
@@ -186,8 +186,7 @@
               "RelativeToolTip": "Application\\Interfaces\\IAnimal\\IAnimalServices.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:05:41.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T00:05:41.168Z"
             },
             {
               "$type": "Document",
@@ -211,8 +210,7 @@
               "RelativeToolTip": "Application\\Interfaces\\IAnimal\\IAnimalQuery.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T00:01:55.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T00:01:55.457Z"
             },
             {
               "$type": "Document",
@@ -234,7 +232,7 @@
               "RelativeDocumentMoniker": "Application\\UseCases\\AnimalRazaService.cs",
               "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\UseCases\\AnimalRazaService.cs",
               "RelativeToolTip": "Application\\UseCases\\AnimalRazaService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAAAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T23:36:19.779Z",
               "EditorCaption": ""
