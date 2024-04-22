@@ -1,24 +1,12 @@
-C:\Users\diego\source\repos\AnimalRepository\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\diego\source\repos\AnimalRepository\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\diego\source\repos\AnimalRepository\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.deps.json
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.pdb
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.sourcelink.json
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\refint\Domain.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.pdb
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Users\diego\source\repos\AnimalRepository\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Domain\obj\Debug\net8.0\ref\Domain.dll

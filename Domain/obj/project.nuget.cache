@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cg0BtUxfIKvSECVHmGaP/wn0c+VkVrwupioKQ3d3T3NZcEc9SOm2f0AM6olIXf6Dq+at9HI5VK+QC3iptsjK9A==",
+  "dgSpecHash": "e0YjpmcZVwsH72GaNbtfshzD/TRh2rvmKogJ1G144D9DDPudyoNIqpUrQhGNCCBV3tYNowio2JXI5PQGqf315w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

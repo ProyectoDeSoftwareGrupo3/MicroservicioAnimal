@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj": {}
+    "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj": {
+    "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj",
+        "projectUniqueName": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj",
         "projectName": "AnimalRepository",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\obj\\",
+        "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj",
+        "packagesPath": "C:\\Users\\jose.bravo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\AnimalRepository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jose.bravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -38,11 +42,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,21 +78,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj": {
+    "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\obj\\",
+        "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\jose.bravo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jose.bravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,8 +110,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj"
+              "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj"
               }
             }
           }
@@ -117,11 +120,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -143,21 +141,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
+    "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\jose.bravo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jose.bravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -177,11 +179,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -203,21 +200,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\jose.bravo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jose.bravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -231,8 +232,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj"
+              "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\jose.bravo\\OneDrive - NEORIS\\Escritorio\\Proyecto de Sofware\\MicroservicioAnimal\\Application\\Application.csproj"
               }
             }
           }
@@ -241,11 +242,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -285,7 +281,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.104/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,32 +1,16 @@
-C:\Users\diego\source\repos\AnimalRepository\Application\bin\Debug\net8.0\Application.deps.json
-C:\Users\diego\source\repos\AnimalRepository\Application\bin\Debug\net8.0\Application.dll
-C:\Users\diego\source\repos\AnimalRepository\Application\bin\Debug\net8.0\Application.pdb
-C:\Users\diego\source\repos\AnimalRepository\Application\bin\Debug\net8.0\Domain.dll
-C:\Users\diego\source\repos\AnimalRepository\Application\bin\Debug\net8.0\Domain.pdb
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.dll
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\refint\Application.dll
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.pdb
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\ref\Application.dll
-C:\Users\diego\source\repos\AnimalRepository\Application\obj\Debug\net8.0\Application.sourcelink.json
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.deps.json
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.pdb
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\bin\Debug\net8.0\Domain.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\bin\Debug\net8.0\Domain.pdb
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.sourcelink.json
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\refint\Application.dll
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.pdb
-C:\Users\Pc\Desktop\Uni\Proyecto_Software\Proyecto_Grupal\Repositorios\MicroservicioAnimal\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.deps.json
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\bin\Debug\net8.0\Application.pdb
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\bin\Debug\net8.0\Domain.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\bin\Debug\net8.0\Domain.pdb
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.sourcelink.json
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.csproj.CopyComplete
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\refint\Application.dll
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\Application.pdb
+C:\Users\jose.bravo\OneDrive - NEORIS\Escritorio\Proyecto de Sofware\MicroservicioAnimal\Application\obj\Debug\net8.0\ref\Application.dll
