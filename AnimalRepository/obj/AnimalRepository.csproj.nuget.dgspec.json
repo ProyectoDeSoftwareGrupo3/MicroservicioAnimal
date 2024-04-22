@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj": {}
+    "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj": {
+    "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj",
         "projectName": "AnimalRepository",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\AnimalRepository.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\obj\\",
+        "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\AnimalRepository.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -79,21 +79,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj": {
+    "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\obj\\",
+        "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,14 +101,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj"
+              "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Domain.csproj"
               }
             }
           }
@@ -143,21 +143,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj": {
+    "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -165,7 +165,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
@@ -203,21 +203,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -225,14 +225,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\Application.csproj"
+              "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Application.csproj"
               }
             }
           }
@@ -285,7 +285,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

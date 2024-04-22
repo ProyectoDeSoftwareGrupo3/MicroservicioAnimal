@@ -39,4 +39,41 @@ public class AnimalQuery : IAnimalQuery
             throw new Conflict("Error en la base de datos");
         }  
     }
+
+    public async Task<List<Animal>> GetByGender(String genero)
+    {
+        try
+        {
+            var result = from animal in _context.Animales where animal.Genero == genero select animal;
+            return result.ToList();
+        }
+        catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
+    public async Task<List<Animal>> GetByWeight(decimal peso)
+    {
+        try
+        {
+            var result = from animal in _context.Animales where animal.Peso == peso select animal;
+            return result.ToList();
+        }
+        catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
+    public async Task<List<Animal>> GetByAge(int peso)
+    {
+        try
+        {
+            var result = from animal in _context.Animales where animal.Edad == peso select animal;
+            return result.ToList();
+        }
+        catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
 }

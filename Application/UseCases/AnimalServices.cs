@@ -71,5 +71,17 @@ public class AnimalServices : IAnimalServices
         return await _animalQuery.GetListAnimal();
     }
 
+    public async Task<List<Animal>> GetByGender(String genero)
+    {
+        return await _animalQuery.GetByGender(genero);
+    }
 
+    public async Task<List<Animal>> GetByWeight(decimal peso) 
+    {
+        return await _animalQuery.GetByWeight(peso);
+    }
+    public async Task<List<Animal>> GetByAge(int edad) 
+    {
+        return await _animalQuery.GetByAge(edad);
+    }
 }

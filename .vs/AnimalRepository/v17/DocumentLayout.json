@@ -1,25 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\",
+  "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\animalrepository\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\application\\usecases\\animalrazaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\application\\usecases\\animalrazaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|solutionrelative:application\\usecases\\animalrazaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\query\\animalrazaquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\animalrepository\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\infrastructure\\query\\animalquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\query\\animalquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\application\\usecases\\animalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|solutionrelative:application\\usecases\\animalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\application\\interfaces\\ianimal\\ianimalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ianimal\\ianimalservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\application\\interfaces\\ianimal\\ianimalquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ianimal\\ianimalquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DFC7487-45B9-47C2-80DB-B34334D83C36}|Domain\\Domain.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\domain\\entities\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DFC7487-45B9-47C2-80DB-B34334D83C36}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\animalrepository\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\animaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\animalrepository\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\animalrepository\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}|AnimalRepository\\AnimalRepository.csproj|solutionrelative:animalrepository\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\infrastructure\\query\\animalrazaquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\query\\animalrazaquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\diego\\source\\repos\\animalrepository\\infrastructure\\command\\animalrazacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\application\\interfaces\\ianimalraza\\ianimalrazaquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ianimalraza\\ianimalrazaquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|c:\\users\\franc\\onedrive\\escritorio\\documentos\\c sharp\\proyecto software\\proyectodesoftwaregrupo3\\microservicioanimal\\infrastructure\\command\\animalrazacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6D981E3-F85D-4CE5-9956-A06D06A25557}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\command\\animalrazacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,8 +66,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 18,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -62,62 +102,176 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AnimalDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Persistence\\AnimalDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AnimalDbContext.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Persistence\\AnimalDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Persistence\\AnimalDbContext.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAQwGUAAAAMAAAA",
+              "DocumentIndex": 6,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Entities\\Animal.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Animal.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Domain\\Entities\\Animal.cs",
+              "RelativeToolTip": "Domain\\Entities\\Animal.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:42:15.328Z",
+              "WhenOpened": "2024-04-22T15:52:07.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AnimalRepository\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\appsettings.Development.json",
+              "RelativeToolTip": "AnimalRepository\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-22T01:20:38.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\appsettings.json",
+              "RelativeDocumentMoniker": "AnimalRepository\\appsettings.json",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\appsettings.json",
+              "RelativeToolTip": "AnimalRepository\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-22T01:19:56.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\Controllers\\AnimalController.cs",
+              "RelativeDocumentMoniker": "AnimalRepository\\Controllers\\AnimalController.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\Controllers\\AnimalController.cs",
+              "RelativeToolTip": "AnimalRepository\\Controllers\\AnimalController.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAwHcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T00:22:04.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AnimalRazaService.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\UseCases\\AnimalRazaService.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\AnimalRazaService.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Application\\UseCases\\AnimalRazaService.cs",
-              "RelativeToolTip": "Application\\UseCases\\AnimalRazaService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAswCIAAAAAAAAA",
+              "Title": "AnimalQuery.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Query\\AnimalQuery.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Query\\AnimalQuery.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Query\\AnimalQuery.cs",
+              "RelativeToolTip": "Infrastructure\\Query\\AnimalQuery.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAowEIAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:36:19.779Z"
+              "WhenOpened": "2024-04-22T00:13:08.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AnimalServices.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\UseCases\\AnimalServices.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\AnimalServices.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\UseCases\\AnimalServices.cs",
+              "RelativeToolTip": "Application\\UseCases\\AnimalServices.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAcwE4AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T00:08:52.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAnimalServices.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimal\\IAnimalServices.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAnimal\\IAnimalServices.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimal\\IAnimalServices.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAnimal\\IAnimalServices.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T00:05:41.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAnimalRazaQuery.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimalRaza\\IAnimalRazaQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAnimalRaza\\IAnimalRazaQuery.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimalRaza\\IAnimalRazaQuery.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAnimalRaza\\IAnimalRazaQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T00:03:30.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAnimalQuery.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimal\\IAnimalQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IAnimal\\IAnimalQuery.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\Interfaces\\IAnimal\\IAnimalQuery.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IAnimal\\IAnimalQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T00:01:55.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AnimalDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Persistence\\AnimalDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AnimalDbContext.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Persistence\\AnimalDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AnimalDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T23:42:15.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnimalRazaService.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\UseCases\\AnimalRazaService.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\AnimalRazaService.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Application\\UseCases\\AnimalRazaService.cs",
+              "RelativeToolTip": "Application\\UseCases\\AnimalRazaService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T23:36:19.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AnimalRazaQuery.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Query\\AnimalRazaQuery.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Query\\AnimalRazaQuery.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Query\\AnimalRazaQuery.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Query\\AnimalRazaQuery.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Query\\AnimalRazaQuery.cs",
               "RelativeToolTip": "Infrastructure\\Query\\AnimalRazaQuery.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAACIAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T22:31:27.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "AnimalRazaCommand.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Command\\AnimalRazaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Command\\AnimalRazaCommand.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Command\\AnimalRazaCommand.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\Infrastructure\\Command\\AnimalRazaCommand.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\Infrastructure\\Command\\AnimalRazaCommand.cs",
               "RelativeToolTip": "Infrastructure\\Command\\AnimalRazaCommand.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAqwCMAAAA/AAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAqwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T21:50:10.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\Program.cs",
               "RelativeDocumentMoniker": "AnimalRepository\\Program.cs",
-              "ToolTip": "C:\\Users\\diego\\source\\repos\\AnimalRepository\\AnimalRepository\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\Documentos\\C SHARP\\PROYECTO SOFTWARE\\ProyectoDeSoftwareGrupo3\\MicroservicioAnimal\\AnimalRepository\\Program.cs",
               "RelativeToolTip": "AnimalRepository\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAAtAAAA",
+              "ViewState": "AQIAACUAAAAAAAAAAAAwwD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-18T02:59:33.34Z"
             }
