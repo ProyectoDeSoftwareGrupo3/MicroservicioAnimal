@@ -1,9 +1,11 @@
 using Application;
+using Application.IMappers;
 using Application.Interfaces;
 using Application.Interfaces.IAnimalGaleria;
 using Application.Interfaces.IAnimalRaza;
 using Application.Interfaces.IAnimalTipo;
 using Application.Interfaces.IFoto;
+using Application.Mappers;
 using Application.UseCases;
 using Infrastructure;
 using Infrastructure.Command;
@@ -43,6 +45,11 @@ builder.Services.AddScoped<IFotoQuery, FotoQuery>();
 builder.Services.AddScoped<IFotoCommand, FotoCommand>();
 builder.Services.AddScoped<IFotoServices, FotoServices>();
 
+builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
+builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();
+builder.Services.AddScoped<IFotoMapper, FotoMapper>();
+builder.Services.AddScoped<IGaleriaMapper,GaleriaMapper>();
+builder.Services.AddScoped<IAnimalRazaMapper,AnimalRazaMapper>();
 
 var app = builder.Build();
 

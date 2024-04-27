@@ -1,7 +1,10 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.IMappers;
+using Application.Interfaces;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
+
 
 namespace Application.UseCases;
 
@@ -9,11 +12,12 @@ public class AnimalServices : IAnimalServices
 {
     private readonly IAnimalCommand _animalCommand;
     private readonly IAnimalQuery _animalQuery;
-
-    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery)
+    private readonly IAnimalMapper _animalMapper;
+    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery, IAnimalMapper animalMapper)
     {
         _animalCommand = animalCommand;
         _animalQuery = animalQuery;
+        _animalMapper = animalMapper;
     }
 
     public async Task<CreateAnimalResponse> CreateAnimal(CreateAnimalRequest request)
@@ -59,11 +63,26 @@ public class AnimalServices : IAnimalServices
             Historia = animal.Historia,
             Adoptado = animal.Adoptado
         });
-    }    
+    }
 
-    public async Task<Animal> GetAnimalById(int id)
+    public async Task<GetAnimalResponse> GetAnimalById(int id)
     {
-        return await _animalQuery.GetAnimalById(id);
+
+        try
+        {
+            if (!await CheckAnimalId(id))
+            {
+                throw new ExceptionNotFound("No Existe animal con ese Id");
+            }
+            var animal = await _animalQuery.GetAnimalById(id);
+            return await _animalMapper.CreateGetAnimalResponse(animal);
+        }
+        catch (ExceptionNotFound e)
+        {
+
+            throw new ExceptionNotFound(e.Message);
+        }
+
     }
 
     public async Task<List<Animal>> GetListAnimal()
@@ -83,5 +102,11 @@ public class AnimalServices : IAnimalServices
     public async Task<List<Animal>> GetByAge(int edad) 
     {
         return await _animalQuery.GetByAge(edad);
+    }
+
+    private async Task<bool> CheckAnimalId(int id)
+    {
+        return (await _animalQuery.GetAnimalById(id)!=null);
+
     }
 }

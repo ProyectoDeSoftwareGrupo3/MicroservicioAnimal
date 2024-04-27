@@ -9,6 +9,7 @@ public class FotoServices : IFotoServices
     private readonly IFotoCommand _fotoCommand;
     private readonly IFotoQuery _fotoQuery;
 
+
     public FotoServices(IFotoCommand fotoCommand, IFotoQuery fotoQuery)
     {
         _fotoCommand = fotoCommand;

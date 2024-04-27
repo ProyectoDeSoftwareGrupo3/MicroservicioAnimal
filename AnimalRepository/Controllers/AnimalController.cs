@@ -1,5 +1,7 @@
 ﻿using Application;
+using Application.Exceptions;
 using Application.Request;
+using Application.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository;
@@ -14,6 +16,7 @@ public class AnimalController : ControllerBase
         _animalServices = animalServices;
     }
     [HttpPost]
+
     public async Task<IActionResult> CreateAnimal(CreateAnimalRequest request)
     {
         try
@@ -65,17 +68,20 @@ public class AnimalController : ControllerBase
             throw;
         }
     }
-    [HttpGet("PorId/{id}")]
+    [HttpGet("{id}")]
+    [ProducesResponseType(typeof(GetAnimalResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetAnimalById(int id)
     {
         try
         {
-            var result = _animalServices.GetAnimalById(id);
-            return new JsonResult(result) { StatusCode = 201 };
+            var result = await _animalServices.GetAnimalById(id);
+            return new JsonResult(result) { StatusCode = 200 };
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
 

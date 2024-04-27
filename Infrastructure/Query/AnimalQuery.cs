@@ -19,7 +19,12 @@ public class AnimalQuery : IAnimalQuery
     {
         try
         {
-            var result = _context.Animales.FirstOrDefault(a => a.Id == id);
+            var result = _context.Animales
+                .Include(a => a.Tipo)
+                .Include(a => a.Galeria)
+                .Include(a =>a.Galeria.Fotos)
+                .Include(a=>a.Tipo.Razas)
+                .FirstOrDefault(a => a.Id == id);
             return result;
         }
         catch (DbUpdateException)
