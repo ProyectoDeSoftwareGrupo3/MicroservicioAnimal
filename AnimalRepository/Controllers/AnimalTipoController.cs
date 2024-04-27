@@ -3,6 +3,7 @@ using Application.Interfaces.IAnimalTipo;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository.Controllers;
@@ -19,6 +20,7 @@ public class AnimalTipoController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(typeof(CreateAnimalTipoResponse),201)]
     public async Task<IActionResult>CreateAnimalTipo(CreateAnimalTipoRequest request)
     {
@@ -33,6 +35,7 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpPut]
+    [Authorize]
     public async Task<IActionResult>UpdateAnimalTipo(UpdateAnimalTipoRequest request)
     {
         try
@@ -46,6 +49,7 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpDelete]
+    [Authorize]
     public async Task<IActionResult>DeleteAnimalTipo(DeleteAnimalTipoRequest request)
     {
         try
@@ -59,6 +63,7 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult>GetAnimalTipoById(int id)
     {
         try
@@ -72,6 +77,7 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult>GetListAnimalTipo()
     {
         try

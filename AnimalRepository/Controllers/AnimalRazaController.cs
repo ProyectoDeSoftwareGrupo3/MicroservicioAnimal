@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.IAnimalRaza;
 using Application.Request;
 using Application.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,7 @@ namespace AnimalRepository.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         [ProducesResponseType(typeof(CreateAnimalRazaResponse),201)]
         public async Task<IActionResult>CreateAnimalRaza(CreateAnimalRazaRequest request)
         {
@@ -32,6 +34,7 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpPut]
+        [Authorize]
         public async Task<IActionResult>UpdateAnimalRaza(UpdateAnimalRazaRequest request)
         {
             try
@@ -45,6 +48,7 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpDelete]
+        [Authorize]
         public async Task<IActionResult>DeleteAnimalRaza(DeleteAnimalRazaRequest request)
         {
             try
@@ -58,6 +62,7 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult>GetAnimalRazaById(int id)
         {
             try
@@ -71,6 +76,7 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult>GetListAnimalRaza()
         {
             try

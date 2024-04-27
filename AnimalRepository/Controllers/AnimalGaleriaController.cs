@@ -1,6 +1,7 @@
 ﻿using Application;
 using Application.Interfaces.IAnimalGaleria;
 using Application.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository.Controllers;
@@ -17,6 +18,7 @@ public class AnimalGaleriaController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> CreateAnimalGaleria(CreateAnimalGaleriaRequest request)
     {
         try
@@ -30,6 +32,7 @@ public class AnimalGaleriaController : ControllerBase
         }
     }
     [HttpPut]
+    [Authorize]
     public async Task<IActionResult> UpdateAnimalGaleria(UpdateAnimalGaleriaRequest request)
     {
         try
@@ -43,6 +46,7 @@ public class AnimalGaleriaController : ControllerBase
         }
     }
     [HttpDelete]
+    [Authorize]
     public async Task<IActionResult> DeleteAnimalGaleria(DeleteAnimalGaleriaRequest request)
     {
         try
@@ -57,6 +61,7 @@ public class AnimalGaleriaController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetAnimalGaleriaById(int id)
     {
         try
@@ -70,6 +75,7 @@ public class AnimalGaleriaController : ControllerBase
         }
     }
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetListAnimalGaleria()
     {
         try

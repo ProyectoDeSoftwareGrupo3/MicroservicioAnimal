@@ -1,6 +1,7 @@
 ﻿using Application;
 using Application.Interfaces.IFoto;
 using Application.Request;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository.Controllers;
@@ -16,6 +17,7 @@ public class FotoControllers : ControllerBase
         _fotoServices = fotoServices;
     }
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> CreateFoto(CreateFotoRequest request)
     {
         try
@@ -29,6 +31,7 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpPut]
+    [Authorize]
     public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
     {
         try
@@ -42,6 +45,7 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpDelete]
+    [Authorize]
     public async Task<IActionResult> DeleteFoto(DeleteFotoRequest request)
     {
         try
@@ -55,6 +59,7 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetFotoById(int id)
     {
         try
@@ -68,6 +73,7 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetListFoto()
     {
         try

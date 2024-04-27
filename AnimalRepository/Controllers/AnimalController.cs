@@ -2,6 +2,7 @@
 using Application.Exceptions;
 using Application.Request;
 using Application.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository;
@@ -15,8 +16,9 @@ public class AnimalController : ControllerBase
     {
         _animalServices = animalServices;
     }
-    [HttpPost]
 
+    [HttpPost]
+    [Authorize]
     public async Task<IActionResult> CreateAnimal(CreateAnimalRequest request)
     {
         try
@@ -30,6 +32,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpPut]
+    [Authorize]
     public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request)
     {
         try
@@ -43,6 +46,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpDelete]
+    [Authorize]
     public async Task<IActionResult> DeleteAnimal(DeleteAnimalRequest request)
     {
         try
@@ -56,6 +60,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetListAnimal()
     {
         try
@@ -69,6 +74,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpGet("{id}")]
+    [Authorize]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetAnimalById(int id)
@@ -86,6 +92,7 @@ public class AnimalController : ControllerBase
     }
 
     [HttpGet("PorGenero/{genero}")]
+    [Authorize]
     public async Task<IActionResult> GetByGender(String genero)
     {
         try
@@ -99,6 +106,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpGet("PorPeso/{peso}")]
+    [Authorize]
     public async Task<IActionResult> GetByWeight(decimal peso)
     {
         try
@@ -112,6 +120,7 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpGet("PorEdad/{edad}")]
+    [Authorize]
     public async Task<IActionResult> GetByAge(int edad)
     {
         try
