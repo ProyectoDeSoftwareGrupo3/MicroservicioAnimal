@@ -16,12 +16,40 @@ namespace Application.Mappers
         {
             _tipoMapper = tipoMapper;
         }
-        public async Task<GetAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza)
+        public async Task<CreateAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza)
+        {
+            var result = new CreateAnimalRazaResponse
+            {
+                Id= raza.Id,
+                Descripcion = raza.Descripcion,
+                Tipo = await _tipoMapper.GetAnimalTipoResponse(raza.Tipo)
+
+            };
+            return result;
+        }
+
+        public async Task<List<GetAnimalRazaResponse>> GetAllAnimalRazaResponse(List<AnimalRaza> razas)
+        {
+            List<GetAnimalRazaResponse> animalResponses = new List<GetAnimalRazaResponse>();
+            foreach (var raza  in razas)
+            {
+                var response = new GetAnimalRazaResponse
+                {
+                    Descripcion = raza.Descripcion,
+                    Tipo = await _tipoMapper.GetAnimalTipoResponse(raza.Tipo)
+                };
+                animalResponses.Add(response);
+            }
+
+            return animalResponses;
+        }
+
+        public async Task<GetAnimalRazaResponse> GetAnimalRazaResponse(AnimalRaza raza)
         {
             var result = new GetAnimalRazaResponse
             {
                 Descripcion = raza.Descripcion,
-                Tipo = await _tipoMapper.CreateAnimalTipoResponse(raza.Tipo)
+                Tipo = await _tipoMapper.GetAnimalTipoResponse(raza.Tipo)
 
             };
             return result;

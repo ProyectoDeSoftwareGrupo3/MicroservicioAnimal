@@ -6,6 +6,16 @@ namespace Application.Mappers
 {
     public class FotoMapper : IFotoMapper
     {
+        public Task<CreateFotoResponse> CreateFotoResponse(Foto foto)
+        {
+            var response = new CreateFotoResponse
+            {
+                Id = foto.Id,
+                url = foto.url,
+            };
+            return Task.FromResult(response);
+        }
+
         public Task<List<GetFotoReponse>> CreateListFotoResponse(List<Foto> fotos)
         {
             List<GetFotoReponse> fotoResponses = new List<GetFotoReponse>();
@@ -23,7 +33,8 @@ namespace Application.Mappers
             
             return Task.FromResult(fotoResponses);
         }
-        public Task<GetFotoReponse>UpdateFotoResponse(Foto foto)
+
+        public Task<GetFotoReponse> GetFotoResponse(Foto foto)
         {
             var response = new GetFotoReponse
             {

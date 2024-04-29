@@ -26,9 +26,9 @@ namespace Infrastructure.Query
         {
             try
                 {
-                    return _context.AnimalesRazas
+                    return await _context.AnimalesRazas
                     .Include(ar =>ar.Tipo)
-                    .FirstOrDefault(ar => ar.Id == id);
+                    .FirstOrDefaultAsync(ar => ar.Id == id);
                 }
             catch (DbException)
                 {
@@ -41,7 +41,9 @@ namespace Infrastructure.Query
         {
             try
             {
-                return await _context.AnimalesRazas.ToListAsync();
+                return await _context.AnimalesRazas
+                    .Include(ar => ar.Tipo)
+                    .ToListAsync();
             }
             catch (Exception)
             {

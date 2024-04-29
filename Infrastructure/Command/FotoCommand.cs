@@ -22,7 +22,7 @@ public class FotoCommand : IFotoCommand
         try
         {
             _context.Fotos.Add(foto);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return foto;
         }
         catch (DbUpdateException)
@@ -36,7 +36,7 @@ public class FotoCommand : IFotoCommand
         {
             var fotoUpdated =  _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
             fotoUpdated.url = request.url;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return fotoUpdated;
         }
         catch (DbUpdateConcurrencyException)
@@ -50,7 +50,7 @@ public class FotoCommand : IFotoCommand
         {
             var fotoDeleted = _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
             _context.Fotos.Remove(fotoDeleted);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return new Foto();
         }
         catch (DbUpdateException)

@@ -13,8 +13,8 @@ namespace Application.Interfaces.IAnimalRaza
     {
         Task<CreateAnimalRazaResponse> CreateAnimalRaza(CreateAnimalRazaRequest request);
         Task<CreateAnimalRazaResponse> DeleteAnimalRaza(DeleteAnimalRazaRequest request);
-        Task<CreateAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request);
-        Task<List<AnimalRaza>> GetListAnimalRaza();
-        Task<AnimalRaza>GetAnimalRazaById(int id);
+        Task<GetAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request);
+        Task<List<GetAnimalRazaResponse>> GetListAnimalRaza();
+        Task<GetAnimalRazaResponse> GetAnimalRazaById(int id);
     }
 }

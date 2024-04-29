@@ -28,7 +28,7 @@ namespace Infrastructure.Command
             try
             {
                 _context.AnimalesRazas.Add(animalRaza);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return animalRaza;
             }
             catch (DbUpdateException)
@@ -38,14 +38,14 @@ namespace Infrastructure.Command
             }
         }
 
-        public Task<AnimalRaza> DeleteAnimalRaza(DeleteAnimalRazaRequest request)
+        public async Task<AnimalRaza> DeleteAnimalRaza(DeleteAnimalRazaRequest request)
         {
             try
             {
                 var animalRazaDeleted = _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == request.Id);
                 _context.AnimalesRazas.Remove(animalRazaDeleted);
-                _context.SaveChanges();
-                return Task.FromResult(new AnimalRaza());
+                await _context.SaveChangesAsync();
+                return animalRazaDeleted;
             }
             catch (DbUpdateException)
             {
@@ -54,15 +54,15 @@ namespace Infrastructure.Command
             }
         }
 
-        public Task<AnimalRaza> UpdateAnimalRaza(UpdateAnimalRazaRequest request)
+        public async Task<AnimalRaza> UpdateAnimalRaza(UpdateAnimalRazaRequest request)
         {
             try
             {
                 var animalRazaUpdated = _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == request.Id);
                 animalRazaUpdated.TipoId = request.TipoId;
                 animalRazaUpdated.Descripcion = request.Descripcion;
-                _context.SaveChanges();
-                return Task.FromResult(animalRazaUpdated);
+                await _context.SaveChangesAsync();
+                return animalRazaUpdated;
             }
             catch (DbException)
             {

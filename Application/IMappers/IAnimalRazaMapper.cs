@@ -10,6 +10,8 @@ namespace Application.IMappers
 {
     public interface IAnimalRazaMapper
     {
-        Task<GetAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza);
+        Task<CreateAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza);
+        Task<GetAnimalRazaResponse> GetAnimalRazaResponse(AnimalRaza raza);
+        Task<List<GetAnimalRazaResponse>> GetAllAnimalRazaResponse(List<AnimalRaza> raza);
     }
 }

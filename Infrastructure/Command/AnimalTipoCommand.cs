@@ -20,7 +20,7 @@ public class AnimalTipoCommand : IAnimalTipoCommand
     {
         try{
                 _context.AnimalesTipos.Add(animalTipo);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return animalTipo;
         }
         catch(DbUpdateException)
@@ -29,21 +29,21 @@ public class AnimalTipoCommand : IAnimalTipoCommand
         }
     }
 
-    public Task<AnimalTipo> DeleteAnimalTipo(DeleteAnimalTipoRequest request)
+    public async Task<AnimalTipo> DeleteAnimalTipo(DeleteAnimalTipoRequest request)
     {
         var animalTipoDeleted =  _context.AnimalesTipos.FirstOrDefault(at => at.Id == request.Id);
         _context.AnimalesTipos.Remove(animalTipoDeleted);
-        _context.SaveChanges();
-        return Task.FromResult(new AnimalTipo());
+        await _context.SaveChangesAsync();
+        return animalTipoDeleted;
     }
 
-    public Task<AnimalTipo> UpdateAnimalTipo(UpdateAnimalTipoRequest request)
+    public async Task<AnimalTipo> UpdateAnimalTipo(UpdateAnimalTipoRequest request)
     {
         try{
             var animalTipoUpdated = _context.AnimalesTipos.FirstOrDefault(at => at.Id == request.Id);
             animalTipoUpdated.Descripcion = request.Descripcion;
-            _context.SaveChanges();
-            return Task.FromResult(animalTipoUpdated);
+            await _context.SaveChangesAsync();
+            return animalTipoUpdated;
         }
         catch (DbUpdateException)
         {

@@ -20,7 +20,7 @@ public class AnimalTipoQuery : IAnimalTipoQuery
     {
         try
             {
-                return _context.AnimalesTipos.FirstOrDefault(at => at.Id == id);
+                return await _context.AnimalesTipos.FirstOrDefaultAsync(at => at.Id == id);
             }
         catch (DbException)
             {

@@ -19,28 +19,31 @@ public class FotoControllers : ControllerBase
         _fotoServices = fotoServices;
     }
     [HttpPost]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(CreateFotoResponse), 201)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> CreateFoto(CreateFotoRequest request)
     {
         try
         {
-            var result = _fotoServices.CreateFoto(request);
+            var result = await _fotoServices.CreateFoto(request);
             return new JsonResult(result){StatusCode = 201};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpPut]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(typeof(GetFotoReponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
     {
         try
         {
-            var result = _fotoServices.UpdateFoto(request);
+            var result =await _fotoServices.UpdateFoto(request);
             return new JsonResult(result){StatusCode = 200};
         }
         catch (ExceptionNotFound ex)
@@ -50,45 +53,54 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpDelete]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(CreateFotoResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> DeleteFoto(DeleteFotoRequest request)
     {
         try
         {
-            var result = _fotoServices.DeleteFoto(request);
+            var result =await _fotoServices.DeleteFoto(request);
             return new JsonResult(result){StatusCode = 201};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpGet("{id}")]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(GetFotoReponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetFotoById(int id)
     {
         try
         {
-            var result = _fotoServices.GetFotoById(id);
-            return new JsonResult(result){StatusCode = 201};
+            var result =await _fotoServices.GetFotoById(id);
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpGet]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(List<GetFotoReponse>), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetListFoto()
     {
         try
         {
             var result = await _fotoServices.GetListFoto();
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
 }

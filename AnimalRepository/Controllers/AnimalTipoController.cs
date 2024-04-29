@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Application.Exceptions;
 using Application.Interfaces.IAnimalTipo;
 using Application.Request;
 using Application.Response;
@@ -20,13 +21,13 @@ public class AnimalTipoController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(typeof(CreateAnimalTipoResponse),201)]
     public async Task<IActionResult>CreateAnimalTipo(CreateAnimalTipoRequest request)
     {
         try
         {
-            var result = _animalTipoService.CreateAnimalTipo(request);
+            var result =await _animalTipoService.CreateAnimalTipo(request);
             return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Exception)
@@ -35,59 +36,71 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpPut]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(GetAnimalTipoResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>UpdateAnimalTipo(UpdateAnimalTipoRequest request)
     {
         try
         {
-            var result = _animalTipoService.UpdateAnimalTipo(request);
+            var result =await _animalTipoService.UpdateAnimalTipo(request);
             return new JsonResult(result) {StatusCode = 201};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpDelete]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(CreateAnimalTipoResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>DeleteAnimalTipo(DeleteAnimalTipoRequest request)
     {
         try
         {
-            var result = _animalTipoService.DeleteAnimalTipo(request);
-            return new JsonResult(result){StatusCode = 201};
+            var result =await _animalTipoService.DeleteAnimalTipo(request);
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpGet("{id}")]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(GetAnimalTipoResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>GetAnimalTipoById(int id)
     {
         try
         {
-            var animalTipo = _animalTipoService.GetAnimalTipoById(id);
+            var animalTipo = await _animalTipoService.GetAnimalTipoById(id);
             return new JsonResult(animalTipo){StatusCode = 201};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpGet]
-    [Authorize]
+    //[Authorize]
+    [ProducesResponseType(typeof(List<GetAnimalTipoResponse>), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>GetListAnimalTipo()
     {
         try
         {
             var result = await _animalTipoService.GetListAnimalTipo();
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
 }

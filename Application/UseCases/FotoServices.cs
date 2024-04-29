@@ -37,11 +37,11 @@ public class FotoServices : IFotoServices
             var foto = new Foto
             {
                 url = request.url,
-                AnimalId = request.AnimalId,
+                AnimalId = request.AnimalId,   
             };
 
-            var fotocreated = _fotoCommand.CreateFoto(foto);
-            return await GetCreateFotoResponse(foto);
+            var fotocreated = await _fotoCommand.CreateFoto(foto);
+            return await _fotoMapper.CreateFotoResponse(fotocreated);
         }
         catch (ExceptionNotFound e)
         {
@@ -51,14 +51,7 @@ public class FotoServices : IFotoServices
 
 
     }
-    private Task<CreateFotoResponse> GetCreateFotoResponse(Foto foto)
-    {
-        return Task.FromResult(new CreateFotoResponse{
-            Id = foto.Id,
-            url = foto.url,
-            
-        });
-    }
+
     public async Task<GetFotoReponse> UpdateFoto(UpdateFotoRequest request)
     {
         try
@@ -68,7 +61,7 @@ public class FotoServices : IFotoServices
                 throw new ExceptionNotFound("No Existe foto con ese Id");
             }
             var result = await _fotoCommand.UpdateFoto(request);
-            return await _fotoMapper.UpdateFotoResponse(result);
+            return await _fotoMapper.GetFotoResponse(result);
         }
         catch (ExceptionNotFound e)
         {
@@ -79,18 +72,46 @@ public class FotoServices : IFotoServices
     }
     public async Task<CreateFotoResponse> DeleteFoto(DeleteFotoRequest request)
     {
-        var result = await _fotoCommand.DeleteFoto(request);
-        return await GetCreateFotoResponse(result);
+        try
+        {
+            if (!await CheckFotoId(request.Id))
+            {
+                throw new ExceptionNotFound("No Existe foto con ese Id");
+            }
+            var result = await _fotoCommand.DeleteFoto(request);
+            return await _fotoMapper.CreateFotoResponse(result);
+        }
+        catch (ExceptionNotFound e)
+        {
+
+            throw new ExceptionNotFound(e.Message);
+        }
+
     }
 
-    public async Task<Foto> GetFotoById(int id)
+    public async Task<GetFotoReponse> GetFotoById(int id)
     {
-        return await _fotoQuery.GetFotoById(id);
+        try
+        {
+            if (!await CheckFotoId(id))
+            {
+                throw new ExceptionNotFound("No Existe foto con ese Id");
+            }
+            var result = await _fotoQuery.GetFotoById(id);
+            return await _fotoMapper.GetFotoResponse(result);
+        }
+        catch (ExceptionNotFound e)
+        {
+
+            throw new ExceptionNotFound(e.Message);
+        }
+        
     }
 
-    public async Task<List<Foto>> GetListFoto()
+    public async Task<List<GetFotoReponse>> GetListFoto()
     {
-        return await _fotoQuery.GetListFoto();
+        var list = await _fotoQuery.GetListFoto();
+        return await _fotoMapper.CreateListFotoResponse(list);
     }
 
 

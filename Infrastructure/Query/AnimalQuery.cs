@@ -36,7 +36,11 @@ public class AnimalQuery : IAnimalQuery
     {
         try
         {
-            return await _context.Animales.ToListAsync();
+            return await _context.Animales
+                .Include(a => a.Raza)
+                .Include(a => a.Fotos)
+                .Include(a => a.Raza.Tipo)
+                .ToListAsync();
         }
         catch (DbUpdateException)
         {

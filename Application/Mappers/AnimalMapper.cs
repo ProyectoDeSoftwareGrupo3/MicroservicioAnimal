@@ -32,7 +32,7 @@ namespace Application.Mappers
                     Id = animal.Id,
                     Nombre = animal.Nombre,
                     Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
-                    Raza = await _razaMapper.CreateAnimalRazaResponse(animal.Raza),
+                    Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
 
                 };
                 animalResponses.Add(response);
@@ -67,7 +67,7 @@ namespace Application.Mappers
                 Nombre = animal.Nombre,
 
                 Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
-                Raza = await _razaMapper.CreateAnimalRazaResponse(animal.Raza),
+                Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
             };
             return response;
         }

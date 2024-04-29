@@ -20,7 +20,7 @@ public class FotoQuery : IFotoQuery
     {
         try
         {
-            return _contex.Fotos.FirstOrDefault(f => f.Id == id);
+            return await _contex.Fotos.FirstOrDefaultAsync(f => f.Id == id);
         }
         catch (DbException)
         {

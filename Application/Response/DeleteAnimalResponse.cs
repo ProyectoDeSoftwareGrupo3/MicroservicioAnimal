@@ -11,6 +11,6 @@ namespace Application.Response
         public int Id { get; set; }
         public string Nombre { get; set; }
         public bool Adoptado { get; set; }
-        public GetAnimalRazaResponse Raza { get; set; }
+        public CreateAnimalRazaResponse Raza { get; set; }
     }
 }
