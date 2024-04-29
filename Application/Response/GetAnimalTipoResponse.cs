@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.Response
 {
-    public class AnimalTipo
+    public class GetAnimalTipoResponse
     {
-        public int Id { get; set; }
         public string Descripcion { get; set; }
-
-        public List<AnimalRaza> Razas { get; set;}
     }
 }

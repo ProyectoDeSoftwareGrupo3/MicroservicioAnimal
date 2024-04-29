@@ -13,5 +13,6 @@ namespace Domain.Entities
         public string Descripcion { get; set; }    
 
         public AnimalTipo Tipo { get; set; }
+        public List<Animal> Animales { get; set; }
     }
 }

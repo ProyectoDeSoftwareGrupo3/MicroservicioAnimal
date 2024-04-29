@@ -13,19 +13,6 @@ namespace Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AnimalGaleria",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AnimalGaleria", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AnimalTipo",
                 columns: table => new
                 {
@@ -36,59 +23,6 @@ namespace Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AnimalTipo", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Foto",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GaleriaId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Foto", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Foto_AnimalGaleria_GaleriaId",
-                        column: x => x.GaleriaId,
-                        principalTable: "AnimalGaleria",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Animal",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AnimalTipoId = table.Column<int>(type: "int", nullable: false),
-                    UsuarioId = table.Column<int>(type: "int", nullable: false),
-                    GaleriaId = table.Column<int>(type: "int", nullable: false),
-                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Genero = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Edad = table.Column<int>(type: "int", maxLength: 50, nullable: false),
-                    Peso = table.Column<decimal>(type: "decimal(3,2)", nullable: false),
-                    Historia = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Adoptado = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Animal", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Animal_AnimalGaleria_GaleriaId",
-                        column: x => x.GaleriaId,
-                        principalTable: "AnimalGaleria",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Animal_AnimalTipo_AnimalTipoId",
-                        column: x => x.AnimalTipoId,
-                        principalTable: "AnimalTipo",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,6 +45,52 @@ namespace Infrastructure.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Animal",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnimalRazaId = table.Column<int>(type: "int", nullable: false),
+                    UsuarioId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Genero = table.Column<bool>(type: "bit", nullable: false),
+                    Edad = table.Column<int>(type: "int", maxLength: 50, nullable: false),
+                    Peso = table.Column<decimal>(type: "decimal(5,2)", nullable: false),
+                    Historia = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Adoptado = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Animal", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Animal_AnimalRaza_AnimalRazaId",
+                        column: x => x.AnimalRazaId,
+                        principalTable: "AnimalRaza",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Foto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    url = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AnimalId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Foto", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Foto_Animal_AnimalId",
+                        column: x => x.AnimalId,
+                        principalTable: "Animal",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "AnimalTipo",
                 columns: new[] { "Id", "Descripcion" },
@@ -121,15 +101,9 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Animal_AnimalTipoId",
+                name: "IX_Animal_AnimalRazaId",
                 table: "Animal",
-                column: "AnimalTipoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Animal_GaleriaId",
-                table: "Animal",
-                column: "GaleriaId",
-                unique: true);
+                column: "AnimalRazaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AnimalRaza_TipoId",
@@ -137,14 +111,17 @@ namespace Infrastructure.Migrations
                 column: "TipoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Foto_GaleriaId",
+                name: "IX_Foto_AnimalId",
                 table: "Foto",
-                column: "GaleriaId");
+                column: "AnimalId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Foto");
+
             migrationBuilder.DropTable(
                 name: "Animal");
 
@@ -152,13 +129,7 @@ namespace Infrastructure.Migrations
                 name: "AnimalRaza");
 
             migrationBuilder.DropTable(
-                name: "Foto");
-
-            migrationBuilder.DropTable(
                 name: "AnimalTipo");
-
-            migrationBuilder.DropTable(
-                name: "AnimalGaleria");
         }
     }
 }

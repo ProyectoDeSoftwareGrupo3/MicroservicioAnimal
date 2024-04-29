@@ -19,12 +19,11 @@ public class AnimalQuery : IAnimalQuery
     {
         try
         {
-            var result = _context.Animales
-                .Include(a => a.Tipo)
-                .Include(a => a.Galeria)
-                .Include(a =>a.Galeria.Fotos)
-                .Include(a=>a.Tipo.Razas)
-                .FirstOrDefault(a => a.Id == id);
+            var result =await _context.Animales
+                .Include(a =>a.Raza)
+                .Include(a=>a.Fotos)
+                .Include(a=>a.Raza.Tipo)
+                .FirstOrDefaultAsync(a => a.Id == id);
             return result;
         }
         catch (DbUpdateException)
@@ -45,40 +44,40 @@ public class AnimalQuery : IAnimalQuery
         }  
     }
 
-    public async Task<List<Animal>> GetByGender(String genero)
-    {
-        try
-        {
-            var result = from animal in _context.Animales where animal.Genero == genero select animal;
-            return result.ToList();
-        }
-        catch (DbUpdateException)
-        {
-            throw new Conflict("Error en la base de datos");
-        }
-    }
-    public async Task<List<Animal>> GetByWeight(decimal peso)
-    {
-        try
-        {
-            var result = from animal in _context.Animales where animal.Peso == peso select animal;
-            return result.ToList();
-        }
-        catch (DbUpdateException)
-        {
-            throw new Conflict("Error en la base de datos");
-        }
-    }
-    public async Task<List<Animal>> GetByAge(int peso)
-    {
-        try
-        {
-            var result = from animal in _context.Animales where animal.Edad == peso select animal;
-            return result.ToList();
-        }
-        catch (DbUpdateException)
-        {
-            throw new Conflict("Error en la base de datos");
-        }
-    }
+    //public async Task<List<Animal>> GetByGender(String genero)
+    //{
+    //    try
+    //    {
+    //        var result = from animal in _context.Animales where animal.Genero == genero select animal;
+    //        return result.ToList();
+    //    }
+    //    catch (DbUpdateException)
+    //    {
+    //        throw new Conflict("Error en la base de datos");
+    //    }
+    //}
+    //public async Task<List<Animal>> GetByWeight(decimal peso)
+    //{
+    //    try
+    //    {
+    //        var result = from animal in _context.Animales where animal.Peso == peso select animal;
+    //        return result.ToList();
+    //    }
+    //    catch (DbUpdateException)
+    //    {
+    //        throw new Conflict("Error en la base de datos");
+    //    }
+    //}
+    //public async Task<List<Animal>> GetByAge(int peso)
+    //{
+    //    try
+    //    {
+    //        var result = from animal in _context.Animales where animal.Edad == peso select animal;
+    //        return result.ToList();
+    //    }
+    //    catch (DbUpdateException)
+    //    {
+    //        throw new Conflict("Error en la base de datos");
+    //    }
+    //}
 }

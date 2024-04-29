@@ -26,7 +26,9 @@ namespace Infrastructure.Query
         {
             try
                 {
-                    return _context.AnimalesRazas.FirstOrDefault(ar => ar.Id == id);
+                    return _context.AnimalesRazas
+                    .Include(ar =>ar.Tipo)
+                    .FirstOrDefault(ar => ar.Id == id);
                 }
             catch (DbException)
                 {

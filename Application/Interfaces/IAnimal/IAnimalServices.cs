@@ -6,12 +6,12 @@ namespace Application;
 
 public interface IAnimalServices
 {
-    Task<CreateAnimalResponse> CreateAnimal(CreateAnimalRequest request);
-    Task<CreateAnimalResponse> UpdateAnimal(UpdateAnimalRequest request);
-    Task<CreateAnimalResponse> DeleteAnimal(DeleteAnimalRequest request);
-    Task<List<Animal>> GetListAnimal();
+    Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request);
+    Task<GetAnimalResponse> UpdateAnimal(UpdateAnimalRequest request);
+    Task<DeleteAnimalResponse> DeleteAnimal(int id);
+    Task<List<GetAnimalResponse>> GetListAnimal();
     Task<GetAnimalResponse> GetAnimalById(int id);
-    Task<List<Animal>> GetByGender(String genero);
-    Task<List<Animal>> GetByWeight(decimal peso);
-    Task<List<Animal>> GetByAge(int edad);
+    //Task<List<Animal>> GetByGender(String genero);
+    //Task<List<Animal>> GetByWeight(decimal peso);
+    //Task<List<Animal>> GetByAge(int edad);
 }

@@ -36,7 +36,6 @@ public class FotoCommand : IFotoCommand
         {
             var fotoUpdated =  _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
             fotoUpdated.url = request.url;
-            fotoUpdated.GaleriaId = request.GaleriaId;
             _context.SaveChanges();
             return fotoUpdated;
         }

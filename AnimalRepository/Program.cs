@@ -1,7 +1,6 @@
 using Application;
 using Application.IMappers;
 using Application.Interfaces;
-using Application.Interfaces.IAnimalGaleria;
 using Application.Interfaces.IAnimalRaza;
 using Application.Interfaces.IAnimalTipo;
 using Application.Interfaces.IFoto;
@@ -72,7 +71,6 @@ builder.Services.AddSwaggerGen(swagger =>
     });
 });
 
-
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
 
@@ -88,10 +86,6 @@ builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
 builder.Services.AddScoped<IAnimalTipoCommand, AnimalTipoCommand>();
 builder.Services.AddScoped<IAnimalTipoService, AnimalTipoServices>();
 
-builder.Services.AddScoped<IAnimalGaleriaQuery, AnimalGaleriaQuery>();
-builder.Services.AddScoped<IAnimalGaleriaCommand, AnimalGaleriaCommand>();
-builder.Services.AddScoped<IAnimalGaleriaServices, AnimalGaleriaServices>();
-
 builder.Services.AddScoped<IFotoQuery, FotoQuery>();
 builder.Services.AddScoped<IFotoCommand, FotoCommand>();
 builder.Services.AddScoped<IFotoServices, FotoServices>();
@@ -99,7 +93,6 @@ builder.Services.AddScoped<IFotoServices, FotoServices>();
 builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
 builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();
 builder.Services.AddScoped<IFotoMapper, FotoMapper>();
-builder.Services.AddScoped<IGaleriaMapper,GaleriaMapper>();
 builder.Services.AddScoped<IAnimalRazaMapper,AnimalRazaMapper>();
 
 var app = builder.Build();

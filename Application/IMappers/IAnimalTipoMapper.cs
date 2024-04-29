@@ -5,6 +5,6 @@ namespace Application.IMappers
 {
     public interface IAnimalTipoMapper
     {
-        Task<CreateAnimalTipoResponse> CreateAnimalTipoResponse(AnimalTipo tipo);
+        Task<GetAnimalTipoResponse> CreateAnimalTipoResponse(AnimalTipo tipo);
     }
 }

@@ -22,7 +22,7 @@ public class AnimalCommand : IAnimalCommand
         try
         {
             _context.Animales.Add(animal);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return animal;
         }
         catch (DbUpdateException)
@@ -35,16 +35,15 @@ public class AnimalCommand : IAnimalCommand
         try
         {
             var animalUpdated = _context.Animales.FirstOrDefault(a => a.Id == request.Id);
-            animalUpdated.AnimalTipoId = request.AnimalTipoId;
+            animalUpdated.AnimalRazaId = request.AnimalRazaId;
             animalUpdated.UsuarioId = request.UsuarioId;
-            animalUpdated.GaleriaId = request.GaleriaId;
             animalUpdated.Nombre = request.Nombre;
             animalUpdated.Genero = request.Genero;
             animalUpdated.Edad = request.Edad;
             animalUpdated.Peso = request.Peso;
             animalUpdated.Historia = request.Historia;
             animalUpdated.Adoptado = request.Adoptado;
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return animalUpdated;
         }
         catch (DbUpdateException)
@@ -53,14 +52,14 @@ public class AnimalCommand : IAnimalCommand
         }
     }
 
-    public Task<Animal> DeleteAnimal(DeleteAnimalRequest request)
+    public async Task<Animal> DeleteAnimal(int id)
     {
         try
         {
-            var animalDeleted = _context.Animales.FirstOrDefault(a => a.Id == request.Id);
-            _context.Animales.Remove(animalDeleted);
-            _context.SaveChanges();
-            return Task.FromResult(new Animal());
+            var animalDeleted = _context.Animales.FirstOrDefault(a => a.Id == id);
+             _context.Animales.Remove(animalDeleted);
+            await _context.SaveChangesAsync();
+            return animalDeleted;
         }
         catch (DbUpdateException)
         {

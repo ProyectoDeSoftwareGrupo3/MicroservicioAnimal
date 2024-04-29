@@ -8,5 +8,5 @@ public interface IAnimalCommand
 {
     Task<Animal> CreateAnimal(Animal animal);
     Task<Animal> UpdateAnimal(UpdateAnimalRequest request);
-    Task<Animal> DeleteAnimal(DeleteAnimalRequest request);
+    Task<Animal> DeleteAnimal(int id);
 }

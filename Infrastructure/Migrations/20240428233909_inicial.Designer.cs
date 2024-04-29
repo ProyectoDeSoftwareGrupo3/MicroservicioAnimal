@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AnimalDbContext))]
-    [Migration("20240421163736_inicial")]
+    [Migration("20240428233909_inicial")]
     partial class inicial
     {
         /// <inheritdoc />
@@ -37,20 +37,15 @@ namespace Infrastructure.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(false);
 
-                    b.Property<int>("AnimalTipoId")
+                    b.Property<int>("AnimalRazaId")
                         .HasColumnType("int");
 
                     b.Property<int>("Edad")
                         .HasMaxLength(50)
                         .HasColumnType("int");
 
-                    b.Property<int>("GaleriaId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Genero")
-                        .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<bool>("Genero")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Historia")
                         .IsRequired()
@@ -62,36 +57,17 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Peso")
-                        .HasColumnType("decimal(3,2)");
+                        .HasColumnType("decimal(5,2)");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AnimalTipoId");
-
-                    b.HasIndex("GaleriaId")
-                        .IsUnique();
-
-                    b.ToTable("Animal", (string)null);
-                });
-
-            modelBuilder.Entity("Domain.Entities.AnimalGaleria", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Descripcion")
+                    b.Property<string>("UsuarioId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("AnimalGaleria", (string)null);
+                    b.HasIndex("AnimalRazaId");
+
+                    b.ToTable("Animal", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>
@@ -153,7 +129,7 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("GaleriaId")
+                    b.Property<int>("AnimalId")
                         .HasColumnType("int");
 
                     b.Property<string>("url")
@@ -162,28 +138,20 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("GaleriaId");
+                    b.HasIndex("AnimalId");
 
                     b.ToTable("Foto", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Animal", b =>
                 {
-                    b.HasOne("Domain.Entities.AnimalTipo", "Tipo")
+                    b.HasOne("Domain.Entities.AnimalRaza", "Raza")
                         .WithMany("Animales")
-                        .HasForeignKey("AnimalTipoId")
+                        .HasForeignKey("AnimalRazaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Entities.AnimalGaleria", "Galeria")
-                        .WithOne("Animal")
-                        .HasForeignKey("Domain.Entities.Animal", "GaleriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Galeria");
-
-                    b.Navigation("Tipo");
+                    b.Navigation("Raza");
                 });
 
             modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>
@@ -199,27 +167,27 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Foto", b =>
                 {
-                    b.HasOne("Domain.Entities.AnimalGaleria", "Galeria")
+                    b.HasOne("Domain.Entities.Animal", "Animal")
                         .WithMany("Fotos")
-                        .HasForeignKey("GaleriaId")
+                        .HasForeignKey("AnimalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Galeria");
+                    b.Navigation("Animal");
                 });
 
-            modelBuilder.Entity("Domain.Entities.AnimalGaleria", b =>
+            modelBuilder.Entity("Domain.Entities.Animal", b =>
                 {
-                    b.Navigation("Animal")
-                        .IsRequired();
-
                     b.Navigation("Fotos");
+                });
+
+            modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>
+                {
+                    b.Navigation("Animales");
                 });
 
             modelBuilder.Entity("Domain.Entities.AnimalTipo", b =>
                 {
-                    b.Navigation("Animales");
-
                     b.Navigation("Razas");
                 });
 #pragma warning restore 612, 618

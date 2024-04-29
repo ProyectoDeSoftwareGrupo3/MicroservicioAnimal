@@ -6,28 +6,68 @@ namespace Application.Mappers
 {
     public class AnimalMapper:IAnimalMapper
     {
-        private readonly IGaleriaMapper _galeriaMapper;
-        private readonly IAnimalTipoMapper _animalTipoMapper;
+        private readonly IAnimalRazaMapper _razaMapper;
+        private readonly IFotoMapper _fotoMapper;
 
-        public AnimalMapper(IGaleriaMapper galeriaMapper,IAnimalTipoMapper animalTipoMapper)
+        public AnimalMapper(IAnimalRazaMapper razaMapper, IFotoMapper fotoMapper)
         {
-            _animalTipoMapper = animalTipoMapper;
-            _galeriaMapper = galeriaMapper;
+            _fotoMapper = fotoMapper;
+            _razaMapper = razaMapper;
         }
-            
-        public async Task<GetAnimalResponse> CreateGetAnimalResponse(Animal animal)
+
+        public async Task<List<GetAnimalResponse>>GetAllAnimalsResponse(List<Animal> animales)
+        {
+            List<GetAnimalResponse> animalResponses = new List<GetAnimalResponse>();
+            foreach (var animal in animales) 
+            {
+                var response = new GetAnimalResponse
+                {
+                    Genero = animal.Genero,
+                    Peso = animal.Peso,
+                    Adoptado = animal.Adoptado,
+                    Edad = animal.Edad,
+
+
+                    Historia = animal.Historia,
+                    Id = animal.Id,
+                    Nombre = animal.Nombre,
+                    Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
+                    Raza = await _razaMapper.CreateAnimalRazaResponse(animal.Raza),
+
+                };
+                animalResponses.Add(response);
+            }
+            return animalResponses;
+        }
+
+        public async Task<DeleteAnimalResponse> DeleteAnimalResponse(Animal animal)
+        {
+            var response = new DeleteAnimalResponse
+            {
+                Id = animal.Id,
+                Adoptado = animal.Adoptado,
+                Nombre = animal.Nombre,
+                Raza = await _razaMapper.CreateAnimalRazaResponse(animal.Raza),
+
+            };
+            return response;
+        }
+
+        public async Task<GetAnimalResponse> GetAnimalResponse(Animal animal)
         {
             var response = new GetAnimalResponse
             {
+                Genero = animal.Genero,
+                Peso = animal.Peso,
                 Adoptado = animal.Adoptado,
                 Edad = animal.Edad,
-                Genero = animal.Genero,
+                
                 Historia = animal.Historia,
                 Id = animal.Id,
                 Nombre = animal.Nombre,
-                Peso = animal.Peso,
-                TipoAnimal = await _animalTipoMapper.CreateAnimalTipoResponse(animal.Tipo),
-                Galeria = await _galeriaMapper.CreateAnimalGaleriaResponse(animal.Galeria),
+
+                Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
+                Raza = await _razaMapper.CreateAnimalRazaResponse(animal.Raza),
             };
             return response;
         }

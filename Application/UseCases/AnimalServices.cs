@@ -1,6 +1,7 @@
 ﻿using Application.Exceptions;
 using Application.IMappers;
 using Application.Interfaces;
+using Application.Interfaces.IAnimalRaza;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
@@ -13,57 +14,84 @@ public class AnimalServices : IAnimalServices
     private readonly IAnimalCommand _animalCommand;
     private readonly IAnimalQuery _animalQuery;
     private readonly IAnimalMapper _animalMapper;
-    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery, IAnimalMapper animalMapper)
+    private readonly IAnimalRazaQuery _razaQuery;
+    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery,IAnimalRazaQuery razaQuery ,IAnimalMapper animalMapper)
     {
         _animalCommand = animalCommand;
         _animalQuery = animalQuery;
+        _razaQuery = razaQuery;
         _animalMapper = animalMapper;
     }
 
-    public async Task<CreateAnimalResponse> CreateAnimal(CreateAnimalRequest request)
+    public async Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request)
     {
-        var animal = new Animal 
+        try
         {
-            AnimalTipoId = request.AnimalTipoId,
-            UsuarioId = request.UsuarioId,
-            GaleriaId = request.GaleriaId,
-            Nombre = request.Nombre,
-            Genero = request.Genero,
-            Edad = request.Edad,
-            Peso = request.Peso,
-            Historia = request.Historia,
-            Adoptado = request.Adoptado
-        };
-        var result = _animalCommand.CreateAnimal(animal);
-        return await GetCreateAnimalResponse(animal);
+            if (!await CheckRazaId(request.RazaId))
+            {
+                throw new Conflict("No Existe raza con ese Id");
+            }
+            var animal = new Animal
+            {
+                AnimalRazaId = request.RazaId,
+                UsuarioId = request.UsuarioId,
+                Nombre = request.Nombre,
+                Genero = request.Genero,
+                Edad = request.Edad,
+                Peso = request.Peso,
+                Historia = request.Historia
+            };
+            var result = await _animalCommand.CreateAnimal(animal);
+            return await _animalMapper.GetAnimalResponse(result);
+        }
+        catch (Conflict e)
+        {
+
+            throw new Conflict(e.Message);
+        }
+
     }
-    public async Task<CreateAnimalResponse> UpdateAnimal(UpdateAnimalRequest request)
+    public async Task<GetAnimalResponse> UpdateAnimal(UpdateAnimalRequest request)
     {
-        var animalUpdated = await _animalCommand.UpdateAnimal(request);
-        return await GetCreateAnimalResponse(animalUpdated);
+        try
+        {
+            if (!await CheckAnimalId(request.Id))
+            {
+                throw new ExceptionNotFound("No Existe animal con ese Id");
+            }
+            if (!await CheckRazaId(request.AnimalRazaId))
+            {
+                throw new ExceptionNotFound("No Existe raza con ese Id");
+            }
+            var animalUpdated = await _animalCommand.UpdateAnimal(request);
+            return await _animalMapper.GetAnimalResponse(await _animalQuery.GetAnimalById(request.Id));
+        }
+        catch (ExceptionNotFound e)
+        {
+
+            throw new ExceptionNotFound(e.Message);
+        }
     }
 
-    public async Task<CreateAnimalResponse> DeleteAnimal(DeleteAnimalRequest request)
+    public async Task<DeleteAnimalResponse> DeleteAnimal(int id)
     {
-        var animalDeleted = await _animalCommand.DeleteAnimal(request);
-        return await GetCreateAnimalResponse(animalDeleted);
-    }
-    private Task<CreateAnimalResponse> GetCreateAnimalResponse(Animal animal)
-    {
-        return Task.FromResult(new CreateAnimalResponse
+        try
         {
-            Id = animal.Id,
-            AnimalTipoId = animal.AnimalTipoId,
-            UsuarioId = animal.UsuarioId,
-            GaleriaId = animal.GaleriaId,
-            Nombre = animal.Nombre,
-            Genero = animal.Genero,
-            Edad = animal.Edad,
-            Peso = animal.Peso,
-            Historia = animal.Historia,
-            Adoptado = animal.Adoptado
-        });
+            if (!await CheckAnimalId(id))
+            {
+                throw new ExceptionNotFound("No Existe animal con ese Id");
+            }
+            var animalDeleted = await _animalCommand.DeleteAnimal(id);
+            return await _animalMapper.DeleteAnimalResponse( animalDeleted);
+        }
+        catch (ExceptionNotFound e)
+        {
+
+            throw new ExceptionNotFound(e.Message);
+        }
+
     }
+
 
     public async Task<GetAnimalResponse> GetAnimalById(int id)
     {
@@ -75,7 +103,7 @@ public class AnimalServices : IAnimalServices
                 throw new ExceptionNotFound("No Existe animal con ese Id");
             }
             var animal = await _animalQuery.GetAnimalById(id);
-            return await _animalMapper.CreateGetAnimalResponse(animal);
+            return await _animalMapper.GetAnimalResponse(animal);
         }
         catch (ExceptionNotFound e)
         {
@@ -85,28 +113,33 @@ public class AnimalServices : IAnimalServices
 
     }
 
-    public async Task<List<Animal>> GetListAnimal()
+    public async Task<List<GetAnimalResponse>> GetListAnimal()
     {
-        return await _animalQuery.GetListAnimal();
+        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimal());
     }
 
-    public async Task<List<Animal>> GetByGender(String genero)
-    {
-        return await _animalQuery.GetByGender(genero);
-    }
+    //public async Task<List<Animal>> GetByGender(String genero)
+    //{
+    //    return await _animalQuery.GetByGender(genero);
+    //}
 
-    public async Task<List<Animal>> GetByWeight(decimal peso) 
-    {
-        return await _animalQuery.GetByWeight(peso);
-    }
-    public async Task<List<Animal>> GetByAge(int edad) 
-    {
-        return await _animalQuery.GetByAge(edad);
-    }
+    //public async Task<List<Animal>> GetByWeight(decimal peso) 
+    //{
+    //    return await _animalQuery.GetByWeight(peso);
+    //}
+    //public async Task<List<Animal>> GetByAge(int edad) 
+    //{
+    //    return await _animalQuery.GetByAge(edad);
+    //}
 
     private async Task<bool> CheckAnimalId(int id)
     {
-        return (await _animalQuery.GetAnimalById(id)!=null);
+        return (await _animalQuery.GetAnimalById(id) != null);
+
+    }
+    private async Task<bool> CheckRazaId(int id)
+    {
+        return (await _razaQuery.GetAnimalRazaById(id) != null);
 
     }
 }

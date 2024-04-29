@@ -1,6 +1,8 @@
 ﻿using Application;
+using Application.Exceptions;
 using Application.Interfaces.IFoto;
 using Application.Request;
+using Application.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,16 +34,19 @@ public class FotoControllers : ControllerBase
     }
     [HttpPut]
     [Authorize]
+    [ProducesResponseType(typeof(GetFotoReponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
     {
         try
         {
             var result = _fotoServices.UpdateFoto(request);
-            return new JsonResult(result){StatusCode = 201};
+            return new JsonResult(result){StatusCode = 200};
         }
-        catch (Exception)
+        catch (ExceptionNotFound ex)
         {
-            throw;
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpDelete]

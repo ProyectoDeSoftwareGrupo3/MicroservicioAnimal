@@ -11,13 +11,20 @@ namespace Application.Mappers
 {
     public class AnimalRazaMapper : IAnimalRazaMapper
     {
-        public Task<GetAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza)
+        private readonly IAnimalTipoMapper _tipoMapper;
+        public AnimalRazaMapper(IAnimalTipoMapper tipoMapper)
+        {
+            _tipoMapper = tipoMapper;
+        }
+        public async Task<GetAnimalRazaResponse> CreateAnimalRazaResponse(AnimalRaza raza)
         {
             var result = new GetAnimalRazaResponse
             {
                 Descripcion = raza.Descripcion,
+                Tipo = await _tipoMapper.CreateAnimalTipoResponse(raza.Tipo)
+
             };
-            return Task.FromResult(result);
+            return result;
         }
     }
 }

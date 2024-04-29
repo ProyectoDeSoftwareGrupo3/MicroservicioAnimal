@@ -5,6 +5,8 @@ namespace Application.IMappers
 {
     public interface IAnimalMapper
     {
-        Task<GetAnimalResponse> CreateGetAnimalResponse(Animal animal);
+        Task<GetAnimalResponse> GetAnimalResponse(Animal animal);
+        Task<DeleteAnimalResponse> DeleteAnimalResponse(Animal animal);
+        Task<List<GetAnimalResponse>> GetAllAnimalsResponse(List<Animal> animales);
     }
 }
