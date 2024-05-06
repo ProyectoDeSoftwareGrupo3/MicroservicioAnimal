@@ -1,9 +1,7 @@
-﻿using System.Text.Json;
-using Application.Exceptions;
+﻿using Application.Exceptions;
 using Application.Interfaces.IAnimalTipo;
 using Application.Request;
 using Application.Response;
-using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +9,7 @@ namespace AnimalRepository.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class AnimalTipoController : ControllerBase
 {
     private readonly IAnimalTipoService _animalTipoService;
@@ -21,7 +20,6 @@ public class AnimalTipoController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize]
     [ProducesResponseType(typeof(CreateAnimalTipoResponse),201)]
     public async Task<IActionResult>CreateAnimalTipo(CreateAnimalTipoRequest request)
     {
@@ -36,7 +34,6 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpPut]
-    //[Authorize]
     [ProducesResponseType(typeof(GetAnimalTipoResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>UpdateAnimalTipo(UpdateAnimalTipoRequest request)
@@ -53,7 +50,6 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpDelete]
-    //[Authorize]
     [ProducesResponseType(typeof(CreateAnimalTipoResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>DeleteAnimalTipo(DeleteAnimalTipoRequest request)
@@ -70,7 +66,6 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpGet("{id}")]
-    //[Authorize]
     [ProducesResponseType(typeof(GetAnimalTipoResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>GetAnimalTipoById(int id)
@@ -87,7 +82,6 @@ public class AnimalTipoController : ControllerBase
         }
     }
     [HttpGet]
-    //[Authorize]
     [ProducesResponseType(typeof(List<GetAnimalTipoResponse>), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult>GetListAnimalTipo()

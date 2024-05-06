@@ -3,13 +3,13 @@ using Application.Interfaces.IAnimalRaza;
 using Application.Request;
 using Application.Response;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimalRepository.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AnimalRazaController : ControllerBase
     {
         private readonly IAnimalRazaService _animalRazaService;
@@ -19,7 +19,6 @@ namespace AnimalRepository.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
         [ProducesResponseType(typeof(CreateAnimalRazaResponse),201)]
         public async Task<IActionResult>CreateAnimalRaza(CreateAnimalRazaRequest request)
         {
@@ -35,7 +34,6 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpPut]
-        //[Authorize]
         [ProducesResponseType(typeof(GetAnimalRazaResponse), 200)]
         [ProducesResponseType(typeof(ExceptionMessage), 404)]
         public async Task<IActionResult>UpdateAnimalRaza(UpdateAnimalRazaRequest request)
@@ -52,7 +50,6 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpDelete]
-        //[Authorize]
         [ProducesResponseType(typeof(CreateAnimalRazaResponse), 200)]
         [ProducesResponseType(typeof(ExceptionMessage), 404)]
         public async Task<IActionResult>DeleteAnimalRaza(DeleteAnimalRazaRequest request)
@@ -69,7 +66,6 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpGet("{id}")]
-        //[Authorize]
         [ProducesResponseType(typeof(GetAnimalRazaResponse), 200)]
         [ProducesResponseType(typeof(ExceptionMessage), 404)]
         public async Task<IActionResult>GetAnimalRazaById(int id)
@@ -86,7 +82,6 @@ namespace AnimalRepository.Controllers
             }
         }
         [HttpGet]
-        //[Authorize]
         [ProducesResponseType(typeof(List<GetAnimalRazaResponse>), 200)]
         [ProducesResponseType(typeof(ExceptionMessage), 404)]
         public async Task<IActionResult>GetListAnimalRaza()

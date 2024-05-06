@@ -3,10 +3,10 @@ using Application.IMappers;
 using Application.Interfaces;
 using Application.Interfaces.IAnimalRaza;
 using Application.Interfaces.IAnimalTipo;
+using Application.Interfaces.ICurrentUser;
 using Application.Interfaces.IFoto;
 using Application.Mappers;
 using Application.UseCases;
-using Infrastructure;
 using Infrastructure.Command;
 using Infrastructure.Persistence;
 using Infrastructure.Query;
@@ -23,56 +23,57 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(options =>
-//    {
-//        options.TokenValidationParameters = new TokenValidationParameters
-//        {
-//            ValidateIssuer = true,
-//            ValidateAudience = true,
-//            ValidateLifetime = true,
-//            ValidateIssuerSigningKey = true,
-//            ValidIssuer = builder.Configuration["JwtOptions:Issuer"],
-//            ValidAudience = builder.Configuration["JwtOptions:Audience"],
-//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtOptions:SigningKey"]))
-//        };
-//    });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["JwtOptions:Issuer"],
+            ValidAudience = builder.Configuration["JwtOptions:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtOptions:SigningKey"]))
+        };
+    });
 
-//builder.Services.AddSwaggerGen(swagger =>
-//{
-//    swagger.SwaggerDoc("v1", new OpenApiInfo
-//    {
-//        Version = "v1",
-//        Title = "Microservicio Tramite",
-//        Description = "Tramites Animales"
-//    });
+builder.Services.AddSwaggerGen(swagger =>
+{
+    swagger.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "Microservicio Tramite",
+        Description = "Tramites Animales"
+    });
 
-//    swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
-//    {
-//        Name = "Authorization",
-//        Type = SecuritySchemeType.ApiKey,
-//        Scheme = "Bearer",
-//        BearerFormat = "JWT",
-//        In = ParameterLocation.Header
-//    });
+    swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header
+    });
 
-//    swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
-//    {
-//        {
-//            new OpenApiSecurityScheme
-//            {
-//                Reference = new OpenApiReference
-//                {
-//                    Type = ReferenceType.SecurityScheme,
-//                    Id = "Bearer"
-//                }
-//           }, Array.Empty<string>()
-//       }
-//    });
-//});
+    swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+           }, Array.Empty<string>()
+       }
+    });
+});
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
 builder.Services.AddScoped<IAnimalCommand, AnimalCommand>();
@@ -94,6 +95,7 @@ builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
 builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();
 builder.Services.AddScoped<IFotoMapper, FotoMapper>();
 builder.Services.AddScoped<IAnimalRazaMapper,AnimalRazaMapper>();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
 var app = builder.Build();
 

@@ -10,6 +10,7 @@ namespace AnimalRepository.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class FotoControllers : ControllerBase
 {
     private readonly IFotoServices _fotoServices;
@@ -19,7 +20,6 @@ public class FotoControllers : ControllerBase
         _fotoServices = fotoServices;
     }
     [HttpPost]
-    //[Authorize]
     [ProducesResponseType(typeof(CreateFotoResponse), 201)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> CreateFoto(CreateFotoRequest request)
@@ -36,7 +36,6 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpPut]
-    //[Authorize]
     [ProducesResponseType(typeof(GetFotoReponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> UpdateFoto(UpdateFotoRequest request)
@@ -53,7 +52,6 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpDelete]
-    //[Authorize]
     [ProducesResponseType(typeof(CreateFotoResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> DeleteFoto(DeleteFotoRequest request)
@@ -70,7 +68,6 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpGet("{id}")]
-    //[Authorize]
     [ProducesResponseType(typeof(GetFotoReponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetFotoById(int id)
@@ -87,7 +84,6 @@ public class FotoControllers : ControllerBase
         }
     }
     [HttpGet]
-    //[Authorize]
     [ProducesResponseType(typeof(List<GetFotoReponse>), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetListFoto()

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AnimalRepository;
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class AnimalController : ControllerBase
 {
     private readonly IAnimalServices _animalServices;
@@ -18,7 +19,6 @@ public class AnimalController : ControllerBase
     }
 
     [HttpPost]
-    //[Authorize]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
     public async Task<IActionResult> CreateAnimal(CreateAnimalRequest request)
@@ -35,7 +35,6 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpPut]
-    //[Authorize]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request)
@@ -52,7 +51,6 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpDelete]
-    //[Authorize]
     [ProducesResponseType(typeof(DeleteAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> DeleteAnimal(int id)
@@ -69,7 +67,6 @@ public class AnimalController : ControllerBase
         }
     }
     [HttpGet]
-    //[Authorize]
     [ProducesResponseType(typeof(List<GetAnimalResponse>), 200)]
     public async Task<IActionResult> GetListAnimal()
     {
@@ -78,7 +75,6 @@ public class AnimalController : ControllerBase
 
     }
     [HttpGet("{id}")]
-    //[Authorize]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     public async Task<IActionResult> GetAnimalById(int id)
