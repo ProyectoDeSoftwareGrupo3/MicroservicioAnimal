@@ -16,7 +16,7 @@ namespace Application.Response
         public string Historia { get; set; }
         public bool Adoptado { get; set; }
 
-        public List<GetFotoReponse> Fotos { get; set; }
+        public List<CreateFotoResponse> Fotos { get; set; }
         public GetAnimalRazaResponse Raza { get; set; }
 
     }

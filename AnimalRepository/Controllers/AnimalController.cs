@@ -90,47 +90,36 @@ public class AnimalController : ControllerBase
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
-
-    //[HttpGet("PorGenero/{genero}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByGender(String genero)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByGender(genero);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
-    //[HttpGet("PorPeso/{peso}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByWeight(decimal peso)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByWeight(peso);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
-    //[HttpGet("PorEdad/{edad}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByAge(int edad)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByAge(edad);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
+    [HttpPost]
+    [Route ("AddMedia")]
+    [ProducesResponseType(typeof(GetAnimalResponse), 201)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
+    public async Task<IActionResult> AddMedia(CreateFotoRequest request)
+    {
+        try
+        {
+            var result = await _animalServices.AddMedia(request);
+            return new JsonResult(result){StatusCode = 201};
+        }
+        catch (ExceptionNotFound ex)
+        {   
+            return new JsonResult(new ExceptionMessage {Message = ex.Message}) {StatusCode = 404};
+        }
+    }
+    [HttpDelete]
+    [Route ("DeleteMedia")]
+    [ProducesResponseType(typeof(GetAnimalResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 409)]
+    public async Task<IActionResult> DeleteMedia(DeleteFotoRequest request)
+    {
+        try
+        {
+            var result = await _animalServices.DeleteMedia(request);
+            return new JsonResult(result){StatusCode = 200};
+        }
+        catch (Conflict ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 409 };
+        }
+    }
 }

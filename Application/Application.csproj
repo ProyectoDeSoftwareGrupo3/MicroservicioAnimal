@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Request\AnimalTipoRequests\" />
+    <Folder Include="Response\AnimalRazaResponse\" />
+    <Folder Include="Response\AnimalResponse\" />
+    <Folder Include="Response\AnimalTipoResponse\" />
+    <Folder Include="Response\FotoResponse\" />
   </ItemGroup>
 
   <ItemGroup>

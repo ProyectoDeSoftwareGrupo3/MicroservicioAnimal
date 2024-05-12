@@ -16,17 +16,18 @@ namespace Application.Mappers
             return Task.FromResult(response);
         }
 
-        public Task<List<GetFotoReponse>> CreateListFotoResponse(List<Foto> fotos)
+        public Task<List<CreateFotoResponse>> CreateListFotoResponse(List<Foto> fotos)
         {
-            List<GetFotoReponse> fotoResponses = new List<GetFotoReponse>();
+            List<CreateFotoResponse> fotoResponses = new List<CreateFotoResponse>();
             if (fotos == null)
             {
                 return Task.FromResult(fotoResponses);
             }
             foreach (var foto in fotos)
             {
-                fotoResponses.Add(new GetFotoReponse
+                fotoResponses.Add(new CreateFotoResponse
                 {
+                    Id = foto.Id,
                     url = foto.url,
                 });
             }

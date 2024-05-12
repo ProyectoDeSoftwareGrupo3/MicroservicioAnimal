@@ -6,7 +6,7 @@ namespace Application.IMappers
 {
     public interface IFotoMapper
     {
-        Task<List<GetFotoReponse>> CreateListFotoResponse(List<Foto> fotos);
+        Task<List<CreateFotoResponse>> CreateListFotoResponse(List<Foto> fotos);
         Task<GetFotoReponse> GetFotoResponse(Foto foto);
         Task<CreateFotoResponse> CreateFotoResponse(Foto foto);
     }

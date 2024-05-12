@@ -49,6 +49,7 @@ public class FotoCommand : IFotoCommand
         try
         {
             var fotoDeleted = _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
+            if(fotoDeleted.AnimalId != request.AnimalId) throw new Conflict("Animal equivocado");
             _context.Fotos.Remove(fotoDeleted);
             await _context.SaveChangesAsync();
             return new Foto();

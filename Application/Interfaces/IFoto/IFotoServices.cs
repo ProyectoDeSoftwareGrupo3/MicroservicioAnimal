@@ -9,6 +9,6 @@ public interface IFotoServices
     Task<CreateFotoResponse> CreateFoto(CreateFotoRequest request);
     Task<GetFotoReponse> UpdateFoto(UpdateFotoRequest request);
     Task<CreateFotoResponse> DeleteFoto(DeleteFotoRequest request);
-    Task<List<GetFotoReponse>> GetListFoto();
+    Task<List<CreateFotoResponse>> GetListFoto();
     Task<GetFotoReponse> GetFotoById(int id);
 }

@@ -19,7 +19,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//Switch
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -67,14 +66,18 @@ builder.Services.AddSwaggerGen(swagger =>
                     Type = ReferenceType.SecurityScheme,
                     Id = "Bearer"
                 }
-           }, Array.Empty<string>()
-       }
+            }, Array.Empty<string>()
+        }
     });
 });
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration["ConnectionString"];
 builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<IFotoQuery, FotoQuery>();
+builder.Services.AddScoped<IFotoCommand, FotoCommand>();
+builder.Services.AddScoped<IFotoServices, FotoServices>();
 
 builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
 builder.Services.AddScoped<IAnimalCommand, AnimalCommand>();
@@ -87,10 +90,6 @@ builder.Services.AddScoped<IAnimalRazaService, AnimalRazaService>();
 builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
 builder.Services.AddScoped<IAnimalTipoCommand, AnimalTipoCommand>();
 builder.Services.AddScoped<IAnimalTipoService, AnimalTipoServices>();
-
-builder.Services.AddScoped<IFotoQuery, FotoQuery>();
-builder.Services.AddScoped<IFotoCommand, FotoCommand>();
-builder.Services.AddScoped<IFotoServices, FotoServices>();
 
 builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
 builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();

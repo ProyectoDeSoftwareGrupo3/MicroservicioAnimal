@@ -108,7 +108,7 @@ public class FotoServices : IFotoServices
         
     }
 
-    public async Task<List<GetFotoReponse>> GetListFoto()
+    public async Task<List<CreateFotoResponse>> GetListFoto()
     {
         var list = await _fotoQuery.GetListFoto();
         return await _fotoMapper.CreateListFotoResponse(list);
