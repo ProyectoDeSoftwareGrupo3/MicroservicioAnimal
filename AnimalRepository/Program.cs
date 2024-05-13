@@ -43,8 +43,8 @@ builder.Services.AddSwaggerGen(swagger =>
     swagger.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Microservicio Tramite",
-        Description = "Tramites Animales"
+        Title = "Microservicio Animal",
+        Description = "Animales"
     });
 
     swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
