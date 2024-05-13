@@ -71,9 +71,9 @@ public class AnimalController : ControllerBase
     [HttpGet]
     //[Authorize]
     [ProducesResponseType(typeof(List<GetAnimalResponse>), 200)]
-    public async Task<IActionResult> GetListAnimal()
+    public async Task<IActionResult> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
     {
-        var result = await _animalServices.GetListAnimal();
+        var result = await _animalServices.GetListAnimal(peso,edad, genero, tipoId, razaId);
         return new JsonResult(result) { StatusCode = 200 };
 
     }
@@ -94,47 +94,4 @@ public class AnimalController : ControllerBase
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
-
-    //[HttpGet("PorGenero/{genero}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByGender(String genero)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByGender(genero);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
-    //[HttpGet("PorPeso/{peso}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByWeight(decimal peso)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByWeight(peso);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
-    //[HttpGet("PorEdad/{edad}")]
-    //[Authorize]
-    //public async Task<IActionResult> GetByAge(int edad)
-    //{
-    //    try
-    //    {
-    //        var result = await _animalServices.GetByAge(edad);
-    //        return new JsonResult(result) { StatusCode = 201 };
-    //    }
-    //    catch (Exception)
-    //    {
-    //        throw;
-    //    }
-    //}
 }

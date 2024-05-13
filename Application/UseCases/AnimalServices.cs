@@ -113,24 +113,11 @@ public class AnimalServices : IAnimalServices
 
     }
 
-    public async Task<List<GetAnimalResponse>> GetListAnimal()
+    public async Task<List<GetAnimalResponse>> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
     {
-        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimal());
+        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimal(peso, edad, genero, tipoId, razaId));
     }
 
-    //public async Task<List<Animal>> GetByGender(String genero)
-    //{
-    //    return await _animalQuery.GetByGender(genero);
-    //}
-
-    //public async Task<List<Animal>> GetByWeight(decimal peso) 
-    //{
-    //    return await _animalQuery.GetByWeight(peso);
-    //}
-    //public async Task<List<Animal>> GetByAge(int edad) 
-    //{
-    //    return await _animalQuery.GetByAge(edad);
-    //}
 
     private async Task<bool> CheckAnimalId(int id)
     {
