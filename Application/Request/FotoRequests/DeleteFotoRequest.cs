@@ -2,5 +2,6 @@
 
 public class DeleteFotoRequest
 {
-    public int Id {get;set;}
+    public int AnimalId {get;set;}
+    public int FotoId { get;set;}
 }

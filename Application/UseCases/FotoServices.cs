@@ -74,7 +74,7 @@ public class FotoServices : IFotoServices
     {
         try
         {
-            if (!await CheckFotoId(request.Id))
+            if (!await CheckFotoId(request.AnimalId))
             {
                 throw new ExceptionNotFound("No Existe foto con ese Id");
             }

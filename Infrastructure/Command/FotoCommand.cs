@@ -48,7 +48,7 @@ public class FotoCommand : IFotoCommand
     {
         try
         {
-            var fotoDeleted = _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
+            var fotoDeleted = _context.Fotos.FirstOrDefault(f => f.Id == request.AnimalId);
             _context.Fotos.Remove(fotoDeleted);
             await _context.SaveChangesAsync();
             return new Foto();

@@ -11,7 +11,7 @@ public interface IAnimalServices
     Task<DeleteAnimalResponse> DeleteAnimal(int id);
     Task<List<GetAnimalResponse>> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId);
     Task<GetAnimalResponse> GetAnimalById(int id);
-    //Task<List<Animal>> GetByGender(String genero);
-    //Task<List<Animal>> GetByWeight(decimal peso);
-    //Task<List<Animal>> GetByAge(int edad);
+
+    Task<GetAnimalResponse> AddMedia(CreateFotoRequest request);
+    Task<GetAnimalResponse> DeleteMedia(DeleteFotoRequest request);
 }
