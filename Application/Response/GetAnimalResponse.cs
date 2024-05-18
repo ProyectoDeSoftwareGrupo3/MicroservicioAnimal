@@ -10,7 +10,7 @@
         public string Historia { get; set; }
         public bool Adoptado { get; set; }
 
-        public List<GetMediaReponse> Fotos { get; set; }
+        public List<GetMediaReponse> Media { get; set; }
         public GetAnimalRazaResponse Raza { get; set; }
 
     }

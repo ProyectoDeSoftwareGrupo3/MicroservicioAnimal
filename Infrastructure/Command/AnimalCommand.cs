@@ -33,9 +33,8 @@ public class AnimalCommand : IAnimalCommand
     {
         try
         {
-            var animalUpdated = _context.Animales.FirstOrDefault(a => a.Id == request.Id);
+            Animal animalUpdated = _context.Animales.FirstOrDefault(a => a.Id == request.Id);
             animalUpdated.AnimalRazaId = request.AnimalRazaId;
-            animalUpdated.UsuarioId = request.UsuarioId;
             animalUpdated.Nombre = request.Nombre;
             animalUpdated.Genero = request.Genero;
             animalUpdated.Edad = request.Edad;

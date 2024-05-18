@@ -31,7 +31,7 @@ namespace Application.Mappers
                     Historia = animal.Historia,
                     Id = animal.Id,
                     Nombre = animal.Nombre,
-                    Fotos = await _fotoMapper.CreateListMediaResponse(animal.Media),
+                    Media = await _fotoMapper.CreateListMediaResponse(animal.Media),
                     Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
 
                 };
@@ -66,7 +66,7 @@ namespace Application.Mappers
                 Id = animal.Id,
                 Nombre = animal.Nombre,
 
-                Fotos = await _fotoMapper.CreateListMediaResponse(animal.Media),
+                Media = await _fotoMapper.CreateListMediaResponse(animal.Media),
                 Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
             };
             return response;

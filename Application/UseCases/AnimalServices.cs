@@ -28,10 +28,7 @@ public class AnimalServices : IAnimalServices
     {
         try
         {
-            if (!await CheckRazaId(request.RazaId))
-            {
-                throw new Conflict("No Existe raza con ese Id");
-            }
+            await CheckRazaId(request.RazaId);
             var animal = new Animal
             {
                 AnimalRazaId = request.RazaId,
@@ -52,15 +49,13 @@ public class AnimalServices : IAnimalServices
         }
 
     }
-    public async Task<GetAnimalResponse> UpdateAnimal(UpdateAnimalRequest request)
+    public async Task<GetAnimalResponse> UpdateAnimal(UpdateAnimalRequest request, string userId)
     {
         try
         {
             await CheckAnimalId(request.Id);
-            if (!await CheckRazaId(request.AnimalRazaId))
-            {
-                throw new ExceptionNotFound("No Existe raza con ese Id");
-            }
+            await CheckUserId(userId, request.Id);
+            await CheckRazaId(request.AnimalRazaId);
             var animalUpdated = await _animalCommand.UpdateAnimal(request);
             return await _animalMapper.GetAnimalResponse(await _animalQuery.GetAnimalById(request.Id));
         }
@@ -71,13 +66,14 @@ public class AnimalServices : IAnimalServices
         }
     }
 
-    public async Task<DeleteAnimalResponse> DeleteAnimal(int id)
+    public async Task<DeleteAnimalResponse> DeleteAnimal(int id, string userId)
     {
         try
         {
             await CheckAnimalId(id);
+            await CheckUserId(userId, id);
             var animalDeleted = await _animalCommand.DeleteAnimal(id);
-            return await _animalMapper.DeleteAnimalResponse( animalDeleted);
+            return await _animalMapper.DeleteAnimalResponse(animalDeleted);
         }
         catch (ExceptionNotFound e)
         {
@@ -112,14 +108,16 @@ public class AnimalServices : IAnimalServices
 
 
 
-    public async Task<GetAnimalResponse> AddMedia(CreateMediaRequest request)
+    public async Task<GetAnimalResponse> AddMedia(CreateMediaRequest request, string userId)
     {
         await CheckAnimalId(request.AnimalId);
+        await CheckUserId(userId, request.AnimalId);
         var mediaResponse = await _mediaServices.CreateMedia(request);
         return await GetAnimalById(request.AnimalId);
     }
-    public async Task<GetAnimalResponse> DeleteMedia(DeleteMediaRequest request)
+    public async Task<GetAnimalResponse> DeleteMedia(DeleteMediaRequest request, string userId)
     {
+        await CheckUserId(userId, request.AnimalId);
         var mediaResponse = await _mediaServices.DeleteMedia(request);
         return await GetAnimalById(request.AnimalId);
     }
@@ -131,10 +129,19 @@ public class AnimalServices : IAnimalServices
             throw new ExceptionNotFound("No Existe animal con ese Id");
         }
     }
-    private async Task<bool> CheckRazaId(int id)
+    private async Task CheckRazaId(int id)
     {
-        return (await _razaQuery.GetAnimalRazaById(id) != null);
-
+        if(await _razaQuery.GetAnimalRazaById(id) == null)
+        {
+            throw new ExceptionNotFound("No Existe raza con ese Id");
+        }
     }
-
+    private async Task CheckUserId(string id, int animalId)
+    {
+        Animal animal = await _animalQuery.GetAnimalById(animalId);
+        if(animal.UsuarioId != id)
+        {
+            throw new NotAuthorizedException("Usuario incorrecto");
+        }
+    }
 }

@@ -37,12 +37,13 @@ public class AnimalController : ControllerBase
     }
     [HttpPut]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
-    public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request)
+    public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
         {
-            var result = await _animalServices.UpdateAnimal(request);
+            var result = await _animalServices.UpdateAnimal(request, currentUser.User.Id);
             return new JsonResult(result) { StatusCode = 201 };
         }
         catch (ExceptionNotFound ex)
@@ -50,21 +51,30 @@ public class AnimalController : ControllerBase
 
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
+        catch (NotAuthorizedException ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 401 };
+        }
     }
     [HttpDelete]
     [ProducesResponseType(typeof(DeleteAnimalResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
-    public async Task<IActionResult> DeleteAnimal(int id)
+    public async Task<IActionResult> DeleteAnimal(int id, [FromServices] ICurrentUserService currentUser)
     {
         try
         {
-            var result = await _animalServices.DeleteAnimal(id);
+            var result = await _animalServices.DeleteAnimal(id, currentUser.User.Id);
             return new JsonResult(result) { StatusCode = 200 };
         }
         catch (ExceptionNotFound ex)
         {
 
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
+        }
+        catch (NotAuthorizedException ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 401 };
         }
     }
     [HttpGet]
@@ -95,34 +105,43 @@ public class AnimalController : ControllerBase
     [HttpPost]
     [Route("AddMedia")]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
-    [ProducesResponseType(typeof(ExceptionMessage), 404)]
-    public async Task<IActionResult> AddMedia(CreateMediaRequest request)
+    [ProducesResponseType(typeof(ExceptionMessage), 401)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]    
+    public async Task<IActionResult> AddMedia(CreateMediaRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
         {
-            var result = await _animalServices.AddMedia(request);
+            var result = await _animalServices.AddMedia(request, currentUser.User.Id);
             return new JsonResult(result) { StatusCode = 201 };
         }
         catch (ExceptionNotFound ex)
         {
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
+        catch (NotAuthorizedException ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 401 };
+        }
     }
     [HttpDelete]
     [Route("DeleteMedia")]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
+    [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
-    public async Task<IActionResult> DeleteMedia(DeleteMediaRequest request)
+    public async Task<IActionResult> DeleteMedia(DeleteMediaRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
         {
-            var result = await _animalServices.DeleteMedia(request);
+            var result = await _animalServices.DeleteMedia(request, currentUser.User.Id);
             return new JsonResult(result) { StatusCode = 200 };
         }
         catch (Conflict ex)
         {
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 409 };
         }
+        catch (NotAuthorizedException ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 401 };
+        }
     }
-
 }
