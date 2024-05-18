@@ -21,7 +21,7 @@ public class AnimalQuery : IAnimalQuery
         {
             var result =await _context.Animales
                 .Include(a =>a.Raza)
-                .Include(a=>a.Fotos)
+                .Include(a=>a.Media)
                 .Include(a=>a.Raza.Tipo)
                 .FirstOrDefaultAsync(a => a.Id == id);
             return result;
@@ -38,7 +38,7 @@ public class AnimalQuery : IAnimalQuery
         {
             var query = _context.Animales
                 .Include(a => a.Raza)
-                .Include(a => a.Fotos)
+                .Include(a => a.Media)
                 .Include(a => a.Raza.Tipo)
                 .AsQueryable();
 

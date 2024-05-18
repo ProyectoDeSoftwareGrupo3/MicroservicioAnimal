@@ -1,7 +1,6 @@
 ﻿using Application.Exceptions;
 using Application.IMappers;
 using Application.Interfaces;
-using Application.Interfaces.IAnimalTipo;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;

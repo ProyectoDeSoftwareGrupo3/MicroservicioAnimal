@@ -1,5 +1,4 @@
 ﻿using Application.Request;
-using Application.Response;
 using Domain.Entities;
 
 namespace Application.Interfaces;

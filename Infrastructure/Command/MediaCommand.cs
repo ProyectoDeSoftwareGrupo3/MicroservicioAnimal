@@ -1,6 +1,5 @@
-﻿using Application;
-using Application.Exceptions;
-using Application.Interfaces.IFoto;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Application.Request;
 using Domain.Entities;
 using Infrastructure.Persistence;
@@ -8,50 +7,50 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Command;
 
-public class FotoCommand : IFotoCommand
+public class MediaCommand : IMediaCommand
 {
     private readonly AnimalDbContext _context;
 
-    public FotoCommand(AnimalDbContext context)
+    public MediaCommand(AnimalDbContext context)
     {
         _context = context;
     }
 
-    public async Task<Foto> CreateFoto(Foto foto)
+    public async Task<Media> CreateMedia(Media media)
     {
         try
         {
-            _context.Fotos.Add(foto);
+            _context.Medias.Add(media);
             await _context.SaveChangesAsync();
-            return foto;
+            return media;
         }
         catch (DbUpdateException)
         {
             throw new Conflict("Error en la base de datos");
         }
     }
-    public async Task<Foto> UpdateFoto(UpdateFotoRequest request)
+    public async Task<Media> UpdateMedia(UpdateMediaRequest request)
     {
         try
         {
-            var fotoUpdated =  _context.Fotos.FirstOrDefault(f => f.Id == request.Id);
-            fotoUpdated.url = request.url;
+            var mediaUpdated =  _context.Medias.FirstOrDefault(f => f.Id == request.Id);
+            mediaUpdated.url = request.url;
             await _context.SaveChangesAsync();
-            return fotoUpdated;
+            return mediaUpdated;
         }
         catch (DbUpdateConcurrencyException)
         {
             throw new Conflict("Error en la base de datos");
         }
     }
-    public async Task<Foto> DeleteFoto(DeleteFotoRequest request)
+    public async Task<Media> DeleteMedia(DeleteMediaRequest request)
     {
         try
         {
-            var fotoDeleted = _context.Fotos.FirstOrDefault(f => f.Id == request.AnimalId);
-            _context.Fotos.Remove(fotoDeleted);
+            var mediaDeleted = _context.Medias.FirstOrDefault(f => f.Id == request.AnimalId);
+            _context.Medias.Remove(mediaDeleted);
             await _context.SaveChangesAsync();
-            return new Foto();
+            return new Media();
         }
         catch (DbUpdateException)
         {

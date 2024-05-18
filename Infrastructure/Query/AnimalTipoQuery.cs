@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 using Application.Exceptions;
-using Application.Interfaces.IAnimalTipo;
+using Application.Interfaces;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;

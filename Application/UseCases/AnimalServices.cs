@@ -1,8 +1,6 @@
 ﻿using Application.Exceptions;
 using Application.IMappers;
 using Application.Interfaces;
-using Application.Interfaces.IAnimalRaza;
-using Application.Interfaces.IFoto;
 using Application.Request;
 using Application.Response;
 using Domain.Entities;
@@ -16,17 +14,17 @@ public class AnimalServices : IAnimalServices
     private readonly IAnimalQuery _animalQuery;
     private readonly IAnimalMapper _animalMapper;
     private readonly IAnimalRazaQuery _razaQuery;
-    private readonly IFotoServices _fotoServices;
-    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery,IAnimalRazaQuery razaQuery ,IAnimalMapper animalMapper, IFotoServices fotoServices)
+    private readonly IMediaServices _mediaServices;
+    public AnimalServices(IAnimalCommand animalCommand, IAnimalQuery animalQuery,IAnimalRazaQuery razaQuery ,IAnimalMapper animalMapper, IMediaServices mediaServices)
     {
         _animalCommand = animalCommand;
         _animalQuery = animalQuery;
         _razaQuery = razaQuery;
         _animalMapper = animalMapper;
-        _fotoServices = fotoServices;
+        _mediaServices = mediaServices;
     }
 
-    public async Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request)
+    public async Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request, string userId)
     {
         try
         {
@@ -37,7 +35,7 @@ public class AnimalServices : IAnimalServices
             var animal = new Animal
             {
                 AnimalRazaId = request.RazaId,
-                UsuarioId = request.UsuarioId,
+                UsuarioId = userId,
                 Nombre = request.Nombre,
                 Genero = request.Genero,
                 Edad = request.Edad,
@@ -114,15 +112,15 @@ public class AnimalServices : IAnimalServices
 
 
 
-    public async Task<GetAnimalResponse> AddMedia(CreateFotoRequest request)
+    public async Task<GetAnimalResponse> AddMedia(CreateMediaRequest request)
     {
         await CheckAnimalId(request.AnimalId);
-        var mediaResponse = await _fotoServices.CreateFoto(request);
+        var mediaResponse = await _mediaServices.CreateMedia(request);
         return await GetAnimalById(request.AnimalId);
     }
-    public async Task<GetAnimalResponse> DeleteMedia(DeleteFotoRequest request)
+    public async Task<GetAnimalResponse> DeleteMedia(DeleteMediaRequest request)
     {
-        var mediaResponse = await _fotoServices.DeleteFoto(request);
+        var mediaResponse = await _mediaServices.DeleteMedia(request);
         return await GetAnimalById(request.AnimalId);
     }
 

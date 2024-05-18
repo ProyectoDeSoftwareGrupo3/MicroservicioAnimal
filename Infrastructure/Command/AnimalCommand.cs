@@ -1,5 +1,4 @@
-﻿using System.Data.Common;
-using Application.Exceptions;
+﻿using Application.Exceptions;
 using Application.Interfaces;
 using Application.Request;
 using Domain.Entities;
@@ -57,7 +56,7 @@ public class AnimalCommand : IAnimalCommand
         try
         {
             var animalDeleted = _context.Animales.FirstOrDefault(a => a.Id == id);
-             _context.Animales.Remove(animalDeleted);
+            _context.Animales.Remove(animalDeleted);
             await _context.SaveChangesAsync();
             return animalDeleted;
         }

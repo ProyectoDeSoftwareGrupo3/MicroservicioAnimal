@@ -1,13 +1,12 @@
-﻿using Application;
-using Application.Response;
+﻿using Application.Response;
 using Domain.Entities;
 
 namespace Application.IMappers
 {
-    public interface IFotoMapper
+    public interface IMediaMapper
     {
-        Task<List<GetFotoReponse>> CreateListFotoResponse(List<Foto> fotos);
-        Task<GetFotoReponse> GetFotoResponse(Foto foto);
-        Task<CreateFotoResponse> CreateFotoResponse(Foto foto);
+        Task<List<GetMediaReponse>> CreateListMediaResponse(List<Media> fotos);
+        Task<GetMediaReponse> GetMediaResponse(Media foto);
+        Task<CreateMediaResponse> CreateMediaResponse(Media foto);
     }
 }

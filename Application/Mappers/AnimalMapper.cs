@@ -7,9 +7,9 @@ namespace Application.Mappers
     public class AnimalMapper:IAnimalMapper
     {
         private readonly IAnimalRazaMapper _razaMapper;
-        private readonly IFotoMapper _fotoMapper;
+        private readonly IMediaMapper _fotoMapper;
 
-        public AnimalMapper(IAnimalRazaMapper razaMapper, IFotoMapper fotoMapper)
+        public AnimalMapper(IAnimalRazaMapper razaMapper, IMediaMapper fotoMapper)
         {
             _fotoMapper = fotoMapper;
             _razaMapper = razaMapper;
@@ -31,7 +31,7 @@ namespace Application.Mappers
                     Historia = animal.Historia,
                     Id = animal.Id,
                     Nombre = animal.Nombre,
-                    Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
+                    Fotos = await _fotoMapper.CreateListMediaResponse(animal.Media),
                     Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
 
                 };
@@ -66,7 +66,7 @@ namespace Application.Mappers
                 Id = animal.Id,
                 Nombre = animal.Nombre,
 
-                Fotos = await _fotoMapper.CreateListFotoResponse(animal.Fotos),
+                Fotos = await _fotoMapper.CreateListMediaResponse(animal.Media),
                 Raza = await _razaMapper.GetAnimalRazaResponse(animal.Raza),
             };
             return response;

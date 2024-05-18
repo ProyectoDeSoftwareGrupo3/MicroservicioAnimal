@@ -1,8 +1,7 @@
 ﻿using Application.Request;
 using Application.Response;
-using Domain.Entities;
 
-namespace Application.Interfaces.IAnimalTipo;
+namespace Application.Interfaces;
 public interface IAnimalTipoService
 {
     Task<CreateAnimalTipoResponse> CreateAnimalTipo(CreateAnimalTipoRequest request);

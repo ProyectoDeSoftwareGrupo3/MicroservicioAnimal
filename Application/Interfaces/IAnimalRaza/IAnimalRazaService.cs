@@ -1,20 +1,14 @@
 ﻿using Application.Request;
 using Application.Response;
-using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Application.Interfaces.IAnimalRaza
+namespace Application.Interfaces;
+
+public interface IAnimalRazaService
 {
-    public interface IAnimalRazaService
-    {
-        Task<CreateAnimalRazaResponse> CreateAnimalRaza(CreateAnimalRazaRequest request);
-        Task<CreateAnimalRazaResponse> DeleteAnimalRaza(DeleteAnimalRazaRequest request);
-        Task<GetAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request);
-        Task<List<GetAnimalRazaResponse>> GetListAnimalRaza();
-        Task<GetAnimalRazaResponse> GetAnimalRazaById(int id);
-    }
+    Task<CreateAnimalRazaResponse> CreateAnimalRaza(CreateAnimalRazaRequest request);
+    Task<CreateAnimalRazaResponse> DeleteAnimalRaza(DeleteAnimalRazaRequest request);
+    Task<GetAnimalRazaResponse> UpdateAnimalRaza(UpdateAnimalRazaRequest request);
+    Task<List<GetAnimalRazaResponse>> GetListAnimalRaza();
+    Task<GetAnimalRazaResponse> GetAnimalRazaById(int id);
 }
+

@@ -1,6 +1,6 @@
 ﻿namespace Application;
 
-public class CreateFotoRequest
+public class CreateMediaRequest
 {
     public string url {get;set;}
     public int AnimalId {get;set;}

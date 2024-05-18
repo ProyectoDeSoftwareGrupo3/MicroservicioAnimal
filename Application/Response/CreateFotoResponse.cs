@@ -1,10 +1,9 @@
 ﻿namespace Application;
 
-public class CreateFotoResponse
+public class CreateMediaResponse
 {
 
     public int Id { get; set; }
     public string url { get; set; }
-   
 
 }

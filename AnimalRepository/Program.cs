@@ -1,10 +1,7 @@
 using Application;
 using Application.IMappers;
 using Application.Interfaces;
-using Application.Interfaces.IAnimalRaza;
-using Application.Interfaces.IAnimalTipo;
 using Application.Interfaces.ICurrentUser;
-using Application.Interfaces.IFoto;
 using Application.Mappers;
 using Application.UseCases;
 using Infrastructure.Command;
@@ -66,13 +63,13 @@ builder.Services.AddSwaggerGen(swagger =>
                     Type = ReferenceType.SecurityScheme,
                     Id = "Bearer"
                 }
-           }, Array.Empty<string>()
-       }
+            }, Array.Empty<string>()
+        }
     });
 });
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration["ConnectionString"];
-builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnimalRepository")));
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
@@ -87,13 +84,13 @@ builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
 builder.Services.AddScoped<IAnimalTipoCommand, AnimalTipoCommand>();
 builder.Services.AddScoped<IAnimalTipoService, AnimalTipoServices>();
 
-builder.Services.AddScoped<IFotoQuery, FotoQuery>();
-builder.Services.AddScoped<IFotoCommand, FotoCommand>();
-builder.Services.AddScoped<IFotoServices, FotoServices>();
+builder.Services.AddScoped<IMediaQuery, MediaQuery>();
+builder.Services.AddScoped<IMediaCommand, MediaCommand>();
+builder.Services.AddScoped<IMediaServices, MediaServices>();
 
 builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
 builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();
-builder.Services.AddScoped<IFotoMapper, FotoMapper>();
+builder.Services.AddScoped<IMediaMapper, MediaMapper>();
 builder.Services.AddScoped<IAnimalRazaMapper,AnimalRazaMapper>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 

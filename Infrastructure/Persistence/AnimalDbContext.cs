@@ -1,10 +1,5 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence
 {
@@ -13,21 +8,21 @@ namespace Infrastructure.Persistence
         public DbSet <Animal> Animales {  get; set; }
         public DbSet<AnimalRaza> AnimalesRazas { get; set; }
         public DbSet<AnimalTipo> AnimalesTipos {  get; set; }
-        public DbSet<Foto> Fotos {get;set;}
+        public DbSet<Media> Medias {get;set;}
         
         public AnimalDbContext(DbContextOptions<AnimalDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Foto>(entity =>{
-                entity.ToTable("Foto");
+            modelBuilder.Entity<Media>(entity =>{
+                entity.ToTable("Media");
                 entity.HasKey(f => f.Id);
                 entity.Property(f => f.Id).ValueGeneratedOnAdd();
                 entity.Property(f => f.url).IsRequired();
 
                 entity.HasOne(f => f.Animal)
-                .WithMany(a => a.Fotos)
+                .WithMany(a => a.Media)
                 .HasForeignKey(f => f.AnimalId);
             });
 
@@ -71,7 +66,7 @@ namespace Infrastructure.Persistence
                 .WithMany(r => r.Animales)
                 .HasForeignKey(a => a.AnimalRazaId);
 
-                entity.HasMany(a => a.Fotos)
+                entity.HasMany(a => a.Media)
                 .WithOne(f => f.Animal);
             });
 

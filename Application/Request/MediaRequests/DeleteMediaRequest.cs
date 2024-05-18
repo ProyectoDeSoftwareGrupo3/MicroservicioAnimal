@@ -1,6 +1,6 @@
 ﻿namespace Application.Request;
 
-public class DeleteFotoRequest
+public class DeleteMediaRequest
 {
     public int AnimalId {get;set;}
     public int FotoId { get;set;}

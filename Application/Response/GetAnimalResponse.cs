@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.Response
+﻿namespace Application.Response
 {
     public class GetAnimalResponse
     {
@@ -16,7 +10,7 @@ namespace Application.Response
         public string Historia { get; set; }
         public bool Adoptado { get; set; }
 
-        public List<GetFotoReponse> Fotos { get; set; }
+        public List<GetMediaReponse> Fotos { get; set; }
         public GetAnimalRazaResponse Raza { get; set; }
 
     }

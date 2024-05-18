@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Infrastructure.Migrations
+namespace AnimalRepository.Migrations
 {
     [DbContext(typeof(AnimalDbContext))]
     partial class AnimalDbContextModelSnapshot : ModelSnapshot
@@ -118,7 +118,7 @@ namespace Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Domain.Entities.Foto", b =>
+            modelBuilder.Entity("Domain.Entities.Media", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -137,7 +137,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("AnimalId");
 
-                    b.ToTable("Foto", (string)null);
+                    b.ToTable("Media", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Animal", b =>
@@ -162,10 +162,10 @@ namespace Infrastructure.Migrations
                     b.Navigation("Tipo");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Foto", b =>
+            modelBuilder.Entity("Domain.Entities.Media", b =>
                 {
                     b.HasOne("Domain.Entities.Animal", "Animal")
-                        .WithMany("Fotos")
+                        .WithMany("Media")
                         .HasForeignKey("AnimalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -175,7 +175,7 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Animal", b =>
                 {
-                    b.Navigation("Fotos");
+                    b.Navigation("Media");
                 });
 
             modelBuilder.Entity("Domain.Entities.AnimalRaza", b =>

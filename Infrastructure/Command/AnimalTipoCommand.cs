@@ -1,5 +1,5 @@
 ﻿using Application.Exceptions;
-using Application.Interfaces.IAnimalTipo;
+using Application.Interfaces;
 using Application.Request;
 using Domain.Entities;
 using Infrastructure.Persistence;

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class Animal
     {
@@ -19,7 +13,7 @@ namespace Domain.Entities
         public bool Adoptado { get; set; }
 
         public AnimalRaza Raza { get; set; }
-        public List<Foto> Fotos { get; set; }
+        public List<Media> Media { get; set; }
 
     }
 }

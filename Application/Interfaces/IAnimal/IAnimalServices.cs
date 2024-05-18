@@ -1,17 +1,16 @@
 ﻿using Application.Request;
 using Application.Response;
-using Domain.Entities;
 
 namespace Application;
 
 public interface IAnimalServices
 {
-    Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request);
+    Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request, string userId);
     Task<GetAnimalResponse> UpdateAnimal(UpdateAnimalRequest request);
     Task<DeleteAnimalResponse> DeleteAnimal(int id);
     Task<List<GetAnimalResponse>> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId);
     Task<GetAnimalResponse> GetAnimalById(int id);
 
-    Task<GetAnimalResponse> AddMedia(CreateFotoRequest request);
-    Task<GetAnimalResponse> DeleteMedia(DeleteFotoRequest request);
+    Task<GetAnimalResponse> AddMedia(CreateMediaRequest request);
+    Task<GetAnimalResponse> DeleteMedia(DeleteMediaRequest request);
 }

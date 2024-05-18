@@ -17,4 +17,10 @@ public class AuthController : Controller
             IsAdmin = currentUser.IsInRole("Administrador")
         });
     }
+    [Authorize]
+    [HttpGet("userId")]
+    public IActionResult UserId([FromServices] ICurrentUserService currentUser)
+    {
+        return new JsonResult(currentUser.User.Id);
+    }
 }

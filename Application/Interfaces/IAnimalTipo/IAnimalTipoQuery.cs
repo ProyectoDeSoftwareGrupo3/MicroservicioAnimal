@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 
-namespace Application.Interfaces.IAnimalTipo;
+namespace Application.Interfaces;
 
 public interface IAnimalTipoQuery
 {

@@ -4,10 +4,10 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace Infrastructure.Migrations
+namespace AnimalRepository.Migrations
 {
     /// <inheritdoc />
-    public partial class inicial : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,7 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Foto",
+                name: "Media",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -82,9 +82,9 @@ namespace Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Foto", x => x.Id);
+                    table.PrimaryKey("PK_Media", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Foto_Animal_AnimalId",
+                        name: "FK_Media_Animal_AnimalId",
                         column: x => x.AnimalId,
                         principalTable: "Animal",
                         principalColumn: "Id",
@@ -111,8 +111,8 @@ namespace Infrastructure.Migrations
                 column: "TipoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Foto_AnimalId",
-                table: "Foto",
+                name: "IX_Media_AnimalId",
+                table: "Media",
                 column: "AnimalId");
         }
 
@@ -120,7 +120,7 @@ namespace Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Foto");
+                name: "Media");
 
             migrationBuilder.DropTable(
                 name: "Animal");

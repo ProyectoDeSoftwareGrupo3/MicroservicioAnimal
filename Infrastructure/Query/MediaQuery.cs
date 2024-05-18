@@ -1,26 +1,26 @@
 ﻿using System.Data.Common;
 using Application.Exceptions;
-using Application.Interfaces.IFoto;
+using Application.Interfaces;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Command;
 
-public class FotoQuery : IFotoQuery
+public class MediaQuery : IMediaQuery
 {
     private readonly AnimalDbContext _contex;
 
-    public FotoQuery(AnimalDbContext contex)
+    public MediaQuery(AnimalDbContext contex)
     {
         _contex = contex;
     }
 
-    public async Task<Foto> GetFotoById(int id)
+    public async Task<Media> GetMediaById(int id)
     {
         try
         {
-            return await _contex.Fotos.FirstOrDefaultAsync(f => f.Id == id);
+            return await _contex.Medias.FirstOrDefaultAsync(f => f.Id == id);
         }
         catch (DbException)
         {
@@ -28,11 +28,11 @@ public class FotoQuery : IFotoQuery
         }
     }
 
-    public async Task<List<Foto>> GetListFoto()
+    public async Task<List<Media>> GetListMedia()
     {
         try
         {
-            return await _contex.Fotos.ToListAsync();
+            return await _contex.Medias.ToListAsync();
         }
         catch (DbException)
         {

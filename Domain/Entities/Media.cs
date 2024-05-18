@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities;
 
-public class Foto
+public class Media
 {
     public int Id {get;set;}
     public string url {get;set;}

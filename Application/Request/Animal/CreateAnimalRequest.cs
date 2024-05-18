@@ -3,7 +3,6 @@
 public class CreateAnimalRequest
 {
         public int RazaId { get; set; }
-        public string UsuarioId { get; set; }
         public string Nombre { get; set; }
         public bool Genero { get; set; }
         public int Edad {  get; set; }
