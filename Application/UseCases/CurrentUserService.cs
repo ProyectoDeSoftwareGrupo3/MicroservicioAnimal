@@ -5,14 +5,13 @@ namespace Application.UseCases;
 public class CurrentUserService : ICurrentUserService
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
-
     public CurrentUserService(IHttpContextAccessor httpContextAccessor)
     {
         _httpContextAccessor = httpContextAccessor;
 
         var id = _httpContextAccessor.HttpContext.User.Claims
-            .FirstOrDefault(q => q.Type == "jti")
-            .Value;
+           .FirstOrDefault(q => q.Type == "jti")
+           .Value;
 
         var userName = _httpContextAccessor.HttpContext.User.Identity.Name;
 

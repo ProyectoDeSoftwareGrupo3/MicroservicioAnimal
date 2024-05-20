@@ -74,16 +74,42 @@ namespace Infrastructure.Persistence
                 new AnimalTipo
                 {
                     Id = 1,
-                    Descripcion="Perro"
+                    Descripcion = "Perro"
                 },
                 new AnimalTipo
                 {
-                    Id=2,
+                    Id = 2,
                     Descripcion = "Gato"
                 }
-                );
-            
-            
+            );
+
+            modelBuilder.Entity<AnimalRaza>().HasData(
+              
+                new AnimalRaza { Id = 3, Descripcion = "Labrador Retriever", TipoId = 1 },
+                new AnimalRaza { Id = 4, Descripcion = "Bulldog", TipoId = 1 },
+                new AnimalRaza { Id = 5, Descripcion = "Beagle", TipoId = 1 },
+                new AnimalRaza { Id = 6, Descripcion = "Poodle", TipoId = 1 },
+                new AnimalRaza { Id = 7, Descripcion = "German Shepherd", TipoId = 1 },
+                new AnimalRaza { Id = 8, Descripcion = "Golden Retriever", TipoId = 1 },
+                new AnimalRaza { Id = 9, Descripcion = "Chihuahua", TipoId = 1 },
+                new AnimalRaza { Id = 10, Descripcion = "Boxer", TipoId = 1 },
+                new AnimalRaza { Id = 1, Descripcion = "Mestizo", TipoId = 1 },
+                new AnimalRaza { Id = 2, Descripcion = "Otro", TipoId = 1 },
+
+              
+                new AnimalRaza { Id = 13, Descripcion = "Siamese", TipoId = 2 },
+                new AnimalRaza { Id = 14, Descripcion = "Persian", TipoId = 2 },
+                new AnimalRaza { Id = 15, Descripcion = "Maine Coon", TipoId = 2 },
+                new AnimalRaza { Id = 16, Descripcion = "Ragdoll", TipoId = 2 },
+                new AnimalRaza { Id = 17, Descripcion = "Bengal", TipoId = 2 },
+                new AnimalRaza { Id = 18, Descripcion = "Sphynx", TipoId = 2 },
+                new AnimalRaza { Id = 19, Descripcion = "Russian Blue", TipoId = 2 },
+                new AnimalRaza { Id = 20, Descripcion = "Scottish Fold", TipoId = 2 },
+                new AnimalRaza { Id = 11, Descripcion = "Mestizo", TipoId = 2 },
+                new AnimalRaza { Id = 12, Descripcion = "Otro", TipoId = 2 }
+            );
+
+
         }
     }
 }

@@ -32,7 +32,7 @@ public class AnimalQuery : IAnimalQuery
         }   
     }
 
-    public async Task<List<Animal>> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
+    public async Task<List<Animal>> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
     {
         try
         {
@@ -42,6 +42,10 @@ public class AnimalQuery : IAnimalQuery
                 .Include(a => a.Raza.Tipo)
                 .AsQueryable();
 
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                query = query.Where(p => p.Nombre.Contains(nombre));
+            }
             if (peso != null)
             {
                 query = query.Where(a => a.Peso == peso);

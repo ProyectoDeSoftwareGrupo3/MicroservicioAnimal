@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace AnimalRepository;
 [Route("api/[controller]")]
 [ApiController]
-[Authorize]
 public class AnimalController : ControllerBase
 {
     private readonly IAnimalServices _animalServices;
@@ -22,6 +21,7 @@ public class AnimalController : ControllerBase
     [HttpPost]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
+    [Authorize]
     public async Task<IActionResult> CreateAnimal(CreateAnimalRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
@@ -39,6 +39,7 @@ public class AnimalController : ControllerBase
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
+    [Authorize]
     public async Task<IActionResult> UpdateAnimal(UpdateAnimalRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
@@ -60,6 +61,7 @@ public class AnimalController : ControllerBase
     [ProducesResponseType(typeof(DeleteAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
+    [Authorize]
     public async Task<IActionResult> DeleteAnimal(int id, [FromServices] ICurrentUserService currentUser)
     {
         try
@@ -79,9 +81,9 @@ public class AnimalController : ControllerBase
     }
     [HttpGet]
     [ProducesResponseType(typeof(List<GetAnimalResponse>), 200)]
-    public async Task<IActionResult> GetListAnimal(decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
+    public async Task<IActionResult> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
     {
-        var result = await _animalServices.GetListAnimal(peso,edad, genero, tipoId, razaId);
+        var result = await _animalServices.GetListAnimal(nombre,peso,edad, genero, tipoId, razaId);
         return new JsonResult(result) { StatusCode = 200 };
 
     }
@@ -106,7 +108,8 @@ public class AnimalController : ControllerBase
     [Route("AddMedia")]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
     [ProducesResponseType(typeof(ExceptionMessage), 401)]
-    [ProducesResponseType(typeof(ExceptionMessage), 404)]    
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
+    [Authorize]
     public async Task<IActionResult> AddMedia(CreateMediaRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
@@ -128,6 +131,7 @@ public class AnimalController : ControllerBase
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 401)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
+    [Authorize]
     public async Task<IActionResult> DeleteMedia(DeleteMediaRequest request, [FromServices] ICurrentUserService currentUser)
     {
         try
