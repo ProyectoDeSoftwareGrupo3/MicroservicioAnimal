@@ -87,6 +87,22 @@ public class AnimalController : ControllerBase
         return new JsonResult(result) { StatusCode = 200 };
 
     }
+    [HttpGet]   
+    [Route("GetAnimalList")] 
+    public async Task<IActionResult> GetAnimalListByUserId(string userId)
+    {
+        try
+        {
+            var result = await _animalServices.GetListAnimalByUserId(userId);
+            return new JsonResult(result) { StatusCode = 200 };
+        }
+        catch (Conflict ex)
+        {
+
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 409 };
+        }  
+    }
+
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]

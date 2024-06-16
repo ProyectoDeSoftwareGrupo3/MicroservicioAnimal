@@ -74,4 +74,21 @@ public class AnimalQuery : IAnimalQuery
             throw new Conflict("Error en la base de datos");
         }
     }
+    public async Task<List<Animal>> GetListAnimalByUserId(string userId)
+    {
+        try
+        {
+            var query = _context.Animales
+                .Include(a => a.Raza)
+                .Include(a => a.Media)
+                .Include(a => a.Raza.Tipo)
+                .AsQueryable();            
+            query = query.Where(a => a.UsuarioId == userId.ToUpper());
+            return await query.ToListAsync();            
+        }
+        catch (DbUpdateException)
+        {
+            throw new Conflict("Error en la base de datos");
+        }
+    }
 }

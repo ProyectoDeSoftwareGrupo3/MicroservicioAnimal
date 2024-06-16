@@ -144,4 +144,9 @@ public class AnimalServices : IAnimalServices
             throw new NotAuthorizedException("Usuario incorrecto");
         }
     }
+
+    public async Task<List<GetAnimalResponse>> GetListAnimalByUserId(string userId)
+    {
+        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimalByUserId(userId));
+    }
 }

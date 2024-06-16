@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.ICurrentUser;
+﻿using System.Security.Claims;
+using Application.Interfaces.ICurrentUser;
 using Microsoft.AspNetCore.Http;
 
 namespace Application.UseCases;
@@ -10,10 +11,12 @@ public class CurrentUserService : ICurrentUserService
         _httpContextAccessor = httpContextAccessor;
 
         var id = _httpContextAccessor.HttpContext.User.Claims
-           .FirstOrDefault(q => q.Type == "jti")
+           .FirstOrDefault(q => q.Type == "uid")
            .Value;
 
-        var userName = _httpContextAccessor.HttpContext.User.Identity.Name;
+        var userName = _httpContextAccessor.HttpContext.User.Claims
+        .FirstOrDefault(q => q.Type == ClaimTypes.NameIdentifier)
+        .Value;
 
         User = new CurrentUser(id, userName);
     }
