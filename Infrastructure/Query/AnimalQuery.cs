@@ -19,7 +19,7 @@ public class AnimalQuery : IAnimalQuery
     {
         try
         {
-            var result =await _context.Animales
+            var result =await _context.Animales.AsNoTracking()
                 .Include(a =>a.Raza)
                 .Include(a=>a.Media)
                 .Include(a=>a.Raza.Tipo)

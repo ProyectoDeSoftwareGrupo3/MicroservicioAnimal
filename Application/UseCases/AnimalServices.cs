@@ -86,12 +86,11 @@ public class AnimalServices : IAnimalServices
 
     public async Task<GetAnimalResponse> GetAnimalById(int id)
     {
-
         try
         {
-            await CheckAnimalId(id);      
             var animal = await _animalQuery.GetAnimalById(id);
-            return await _animalMapper.GetAnimalResponse(animal);
+
+            return animal == null ? throw new ExceptionNotFound("No Existe animal con ese Id") : await _animalMapper.GetAnimalResponse(animal);
         }
         catch (ExceptionNotFound e)
         {
