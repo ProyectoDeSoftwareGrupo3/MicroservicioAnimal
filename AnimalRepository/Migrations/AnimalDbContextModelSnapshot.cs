@@ -77,7 +77,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Max es un perrito muy amigable que adora jugar a buscar la pelota. Le encanta estar rodeado de personas y siempre está dispuesto a hacer nuevos amigos. Es un perro leal y muy cariñoso.",
                             Nombre = "Max",
                             Peso = 30.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -89,7 +89,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Bella es una perra juguetona que disfruta de largos paseos y caricias en la barriga. Es muy sociable y le encanta interactuar con otros perros y personas. Bella es perfecta para una familia activa.",
                             Nombre = "Bella",
                             Peso = 28.3m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -101,7 +101,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Charlie es un perro leal que adora estar cerca de su familia. A pesar de su aspecto robusto, es muy cariñoso y disfruta de los momentos de tranquilidad. Es un excelente compañero para cualquier hogar.",
                             Nombre = "Charlie",
                             Peso = 24.1m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -113,7 +113,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Lucy es una perrita muy tranquila que se lleva bien con los niños. Le encanta pasar el tiempo en casa y recibir mimos. Es una perrita muy leal y cariñosa, perfecta para cualquier familia.",
                             Nombre = "Lucy",
                             Peso = 21.7m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -125,7 +125,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Buddy es un Labrador Retriever lleno de energía y entusiasmo. Le encanta jugar y hacer ejercicio al aire libre. Es muy inteligente y siempre está dispuesto a aprender nuevos trucos.",
                             Nombre = "Buddy",
                             Peso = 30.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -137,7 +137,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Daisy es una perrita muy cariñosa que disfruta de largas caminatas y caricias. Es perfecta para una familia que le guste el aire libre y pasar tiempo juntos. Daisy es muy leal y protectora.",
                             Nombre = "Daisy",
                             Peso = 28.3m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -149,7 +149,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Rocky es un Bulldog robusto y amigable. Le gusta mucho jugar con otros perros y es muy sociable. Es un perro tranquilo que disfruta de los momentos de relajación junto a su familia.",
                             Nombre = "Rocky",
                             Peso = 24.1m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -161,7 +161,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Molly es una Bulldog muy tranquila y se lleva bien con niños. Es perfecta para un hogar con niños, ya que es muy paciente y cariñosa. Molly disfruta de las siestas y de la compañía de su familia.",
                             Nombre = "Molly",
                             Peso = 21.7m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -173,7 +173,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Jack es un Beagle curioso y lleno de vida. Siempre está buscando aventuras y le encanta explorar su entorno. Es muy inteligente y disfruta de los juegos de olfateo y búsqueda.",
                             Nombre = "Jack",
                             Peso = 15.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -185,7 +185,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Luna es muy juguetona y le encanta olfatear todo a su alrededor. Es ideal para paseos largos y actividades al aire libre. Luna es muy cariñosa y siempre está dispuesta a jugar.",
                             Nombre = "Luna",
                             Peso = 13.8m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -197,7 +197,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Cooper es un Caniche inteligente y muy entrenado. Es perfecto para un hogar que le dedique tiempo y atención. Cooper disfruta de los juegos de inteligencia y siempre está listo para aprender.",
                             Nombre = "Cooper",
                             Peso = 10.2m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3"
                         },
                         new
                         {
@@ -209,7 +209,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Sophie es muy cariñosa y le encanta acurrucarse. Es ideal para un hogar tranquilo y amoroso. Sophie disfruta de las caricias y siempre está buscando la compañía de su familia.",
                             Nombre = "Sophie",
                             Peso = 9.7m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -221,7 +221,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Bear es un Pastor Alemán muy protector. Es excelente para seguridad y compañía. Bear es muy leal y siempre está dispuesto a cuidar de su familia. Disfruta de los juegos y el ejercicio.",
                             Nombre = "Bear",
                             Peso = 35.4m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -233,7 +233,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Zoe es muy leal y amigable. Le encanta estar activa y siempre está lista para jugar. Es una compañera perfecta para actividades al aire libre y disfruta de la compañía de su familia.",
                             Nombre = "Zoe",
                             Peso = 32.8m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -245,7 +245,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Toby es un Golden Retriever muy cariñoso y sociable. Es perfecto para cualquier familia que busque un perro leal y amigable. Toby disfruta de los juegos y de las largas caminatas.",
                             Nombre = "Toby",
                             Peso = 29.3m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -257,7 +257,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Chloe es muy dulce y se lleva bien con todos. Es ideal para un hogar con otros animales. Chloe es muy cariñosa y siempre está buscando la atención y el cariño de su familia.",
                             Nombre = "Chloe",
                             Peso = 27.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -269,7 +269,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Oscar es un Chihuahua muy valiente y enérgico. Le encanta estar cerca de su dueño y es muy protector. Es ideal para una persona que busque un compañero pequeño pero lleno de carácter.",
                             Nombre = "Oscar",
                             Peso = 6.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -281,7 +281,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Lola es muy juguetona y le encanta ser el centro de atención. Es perfecta para un hogar que le guste la compañía de un perro pequeño y enérgico. Lola es muy cariñosa y siempre está lista para jugar.",
                             Nombre = "Lola",
                             Peso = 5.8m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -293,7 +293,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Duke es un Boxer muy activo y lleno de energía. Le encanta correr y jugar al aire libre. Es muy leal y protector, ideal para una familia que disfrute de las actividades físicas.",
                             Nombre = "Duke",
                             Peso = 28.2m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -305,7 +305,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Ruby es una perrita muy juguetona y llena de vida. Disfruta de los juegos y de pasar tiempo con su familia. Es muy cariñosa y siempre está lista para una nueva aventura.",
                             Nombre = "Ruby",
                             Peso = 26.4m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "3D0F1848-5354-4CED-A125-525218044370"
                         },
                         new
                         {
@@ -317,7 +317,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Rex es un gato muy amigable y leal. Le encanta estar cerca de las personas y siempre está dispuesto a jugar. Es un gatito muy adaptable y se lleva bien con otros animales.",
                             Nombre = "Rex",
                             Peso = 25.0m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -329,7 +329,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Lily es una gatita Mestiza muy dulce y cariñosa. Es perfecta para una familia que busque un compañero leal y lleno de amor. Lily disfruta de los juegos y de la compañía de su familia.",
                             Nombre = "Lily",
                             Peso = 23.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -341,7 +341,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Sam es un michi muy curioso y juguetón. Le encanta explorar su entorno y hacer nuevos amigos. Es muy inteligente y siempre está dispuesto a aprender nuevas cosas.... y hacer desastres",
                             Nombre = "Sam",
                             Peso = 20.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -353,7 +353,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Michifuzz es una gatita muy dulce y cariñosa. Disfruta de los juegos y de pasar tiempo con su familia. Es perfecta para un hogar amoroso y paciente.",
                             Nombre = "Michifuzz",
                             Peso = 18.9m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -365,7 +365,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Simba es un gato Siamese muy curioso y lleno de energía. Le encanta explorar y jugar con juguetes interactivos. Es muy cariñoso y disfruta de la compañía de su familia.",
                             Nombre = "Simba",
                             Peso = 4.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -377,7 +377,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Nala es una gatita Siamese muy juguetona y cariñosa. Disfruta de los juegos y de acurrucarse con su familia. Es perfecta para un hogar que le guste la compañía de un gato activo.",
                             Nombre = "Nala",
                             Peso = 4.2m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -389,7 +389,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Leo es un gato Persa muy tranquilo y cariñoso. Le encanta pasar tiempo en casa y recibir mimos. Es ideal para un hogar que busque un compañero tranquilo y amoroso.",
                             Nombre = "Leo",
                             Peso = 5.0m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -401,7 +401,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Mia es una gatita Persa muy dulce y cariñosa. Disfruta de la tranquilidad del hogar y de la compañía de su familia. Es perfecta para un hogar que le guste la compañía de un gato cariñoso.",
                             Nombre = "Mia",
                             Peso = 4.7m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -413,7 +413,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Oscar es un gato Maine Coon muy juguetón y curioso. Le encanta explorar su entorno y jugar con otros gatos. Es muy cariñoso y disfruta de la compañía de su familia.",
                             Nombre = "Oscar",
                             Peso = 6.8m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -425,7 +425,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Maggie es una gatita Maine Coon muy juguetona y le encanta estar en compañía de otros gatos. Disfruta de los juegos y de acurrucarse con su familia.",
                             Nombre = "Maggie",
                             Peso = 6.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0"
                         },
                         new
                         {
@@ -437,7 +437,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Zeus es un gato Ragdoll muy cariñoso. Le encanta ser el centro de atención y recibir mimos. Es muy tranquilo y disfruta de la compañía de su familia.",
                             Nombre = "Zeus",
                             Peso = 5.9m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -449,7 +449,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Daisy es una gatita Ragdoll muy dulce que busca un hogar donde pueda recibir mucho cariño. Es muy tranquila y le encanta estar cerca de su familia.",
                             Nombre = "Daisy",
                             Peso = 5.7m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -461,7 +461,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Thor es un gato Bengala muy activo y juguetón. Le encanta explorar y jugar con juguetes interactivos. Es muy inteligente y disfruta de la compañía de su familia.",
                             Nombre = "Thor",
                             Peso = 6.2m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -473,7 +473,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Luna es una gatita Bengala muy curiosa y llena de energía. Le encanta explorar y jugar con otros gatos. Es muy cariñosa y disfruta de la compañía de su familia.",
                             Nombre = "Luna",
                             Peso = 5.9m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -485,7 +485,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Coco es un gato Sphynx muy curioso y juguetón. Le encanta estar en compañía de otros gatos y explorar su entorno. Es muy cariñoso y disfruta de la atención de su familia.",
                             Nombre = "Coco",
                             Peso = 6.0m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -497,7 +497,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Milo es un gato Sphynx muy tranquilo y amoroso. Disfruta de los momentos de calma en casa y de recibir mimos. Es perfecto para un hogar que busque un gato cariñoso y tranquilo.",
                             Nombre = "Milo",
                             Peso = 5.5m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -509,7 +509,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Misha es una gatita Russian Blue muy afectuosa y leal. Disfruta de los momentos tranquilos en casa y de la compañía de su familia. Es muy cariñosa y siempre está lista para recibir mimos.",
                             Nombre = "Misha",
                             Peso = 5.8m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -521,7 +521,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Oliver es un gato Russian Blue muy juguetón y lleno de energía. Le encanta jugar con juguetes y explorar su entorno. Es muy cariñoso y disfruta de la compañía de su familia.",
                             Nombre = "Oliver",
                             Peso = 5.4m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -533,7 +533,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Milo es un gato Scottish Fold muy tranquilo y cariñoso. Disfruta de los momentos de calma en casa y de recibir mimos. Es perfecto para un hogar que busque un compañero tranquilo y amoroso.",
                             Nombre = "Milo",
                             Peso = 6.2m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         },
                         new
                         {
@@ -545,7 +545,7 @@ namespace AnimalRepository.Migrations
                             Historia = "Luna es una gatita Scottish Fold muy juguetona y llena de vida. Disfruta de los juegos y de pasar tiempo con su familia. Es perfecta para un hogar amoroso y paciente.",
                             Nombre = "Luna",
                             Peso = 5.9m,
-                            UsuarioId = "19BB7F593372433FB34300E75953D3A3"
+                            UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA"
                         });
                 });
 

@@ -115,7 +115,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 1,
                     AnimalRazaId = 1,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Max",
                     Genero = true,
                     Edad = 5,
@@ -127,7 +127,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 2,
                     AnimalRazaId = 1,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Bella",
                     Genero = false,
                     Edad = 4,
@@ -139,7 +139,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 3,
                     AnimalRazaId = 2,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Charlie",
                     Genero = true,
                     Edad = 6,
@@ -151,7 +151,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 4,
                     AnimalRazaId = 2,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Lucy",
                     Genero = false,
                     Edad = 3,
@@ -163,7 +163,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 5,
                     AnimalRazaId = 3,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Buddy",
                     Genero = true,
                     Edad = 6,
@@ -175,7 +175,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 6,
                     AnimalRazaId = 3,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Daisy",
                     Genero = false,
                     Edad = 4,
@@ -187,7 +187,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 7,
                     AnimalRazaId = 4,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Rocky",
                     Genero = true,
                     Edad = 5,
@@ -199,7 +199,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 8,
                     AnimalRazaId = 4,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Molly",
                     Genero = false,
                     Edad = 3,
@@ -211,7 +211,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 9,
                     AnimalRazaId = 5,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Jack",
                     Genero = true,
                     Edad = 4,
@@ -223,7 +223,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 10,
                     AnimalRazaId = 5,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Luna",
                     Genero = false,
                     Edad = 2,
@@ -235,7 +235,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 11,
                     AnimalRazaId = 6,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "19BB7F59-3372-433F-B343-00E75953D3A3",
                     Nombre = "Cooper",
                     Genero = true,
                     Edad = 5,
@@ -247,7 +247,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 12,
                     AnimalRazaId = 6,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Sophie",
                     Genero = false,
                     Edad = 3,
@@ -259,7 +259,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 13,
                     AnimalRazaId = 7,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Bear",
                     Genero = true,
                     Edad = 6,
@@ -271,7 +271,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 14,
                     AnimalRazaId = 7,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Zoe",
                     Genero = false,
                     Edad = 4,
@@ -283,7 +283,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 15,
                     AnimalRazaId = 8,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Toby",
                     Genero = true,
                     Edad = 5,
@@ -295,7 +295,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 16,
                     AnimalRazaId = 8,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Chloe",
                     Genero = false,
                     Edad = 3,
@@ -307,7 +307,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 17,
                     AnimalRazaId = 9,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Oscar",
                     Genero = true,
                     Edad = 4,
@@ -319,7 +319,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 18,
                     AnimalRazaId = 9,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Lola",
                     Genero = false,
                     Edad = 2,
@@ -331,7 +331,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 19,
                     AnimalRazaId = 10,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Duke",
                     Genero = true,
                     Edad = 5,
@@ -343,7 +343,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 20,
                     AnimalRazaId = 10,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "3D0F1848-5354-4CED-A125-525218044370",
                     Nombre = "Ruby",
                     Genero = false,
                     Edad = 3,
@@ -355,7 +355,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 21,
                     AnimalRazaId = 11,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Rex",
                     Genero = true,
                     Edad = 4,
@@ -367,7 +367,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 22,
                     AnimalRazaId = 11,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Lily",
                     Genero = false,
                     Edad = 3,
@@ -379,7 +379,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 23,
                     AnimalRazaId = 12,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Sam",
                     Genero = true,
                     Edad = 4,
@@ -391,7 +391,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 24,
                     AnimalRazaId = 12,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Michifuzz",
                     Genero = false,
                     Edad = 2,
@@ -403,7 +403,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 25,
                     AnimalRazaId = 13,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Simba",
                     Genero = true,
                     Edad = 3,
@@ -415,7 +415,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 26,
                     AnimalRazaId = 13,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Nala",
                     Genero = false,
                     Edad = 2,
@@ -427,7 +427,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 27,
                     AnimalRazaId = 14,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Leo",
                     Genero = true,
                     Edad = 4,
@@ -439,7 +439,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 28,
                     AnimalRazaId = 14,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Mia",
                     Genero = false,
                     Edad = 3,
@@ -451,7 +451,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 29,
                     AnimalRazaId = 15,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Oscar",
                     Genero = true,
                     Edad = 5,
@@ -463,7 +463,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 30,
                     AnimalRazaId = 15,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "AAEF2C4F-DED7-4B1A-ADD3-9A3448B9E9E0",
                     Nombre = "Maggie",
                     Genero = false,
                     Edad = 3,
@@ -475,7 +475,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 31,
                     AnimalRazaId = 16,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Zeus",
                     Genero = true,
                     Edad = 4,
@@ -487,7 +487,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 32,
                     AnimalRazaId = 16,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Daisy",
                     Genero = false,
                     Edad = 2,
@@ -499,7 +499,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 33,
                     AnimalRazaId = 17,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Thor",
                     Genero = true,
                     Edad = 5,
@@ -511,7 +511,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 34,
                     AnimalRazaId = 17,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Luna",
                     Genero = false,
                     Edad = 3,
@@ -523,7 +523,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 35,
                     AnimalRazaId = 18,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Coco",
                     Genero = true,
                     Edad = 4,
@@ -535,7 +535,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 36,
                     AnimalRazaId = 18,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Milo",
                     Genero = true,
                     Edad = 3,
@@ -547,7 +547,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 37,
                     AnimalRazaId = 19,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Misha",
                     Genero = false,
                     Edad = 4,
@@ -559,7 +559,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 38,
                     AnimalRazaId = 19,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Oliver",
                     Genero = true,
                     Edad = 3,
@@ -571,7 +571,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 39,
                     AnimalRazaId = 20,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Milo",
                     Genero = true,
                     Edad = 4,
@@ -583,7 +583,7 @@ namespace Infrastructure.Persistence
                 {
                     Id = 40,
                     AnimalRazaId = 20,
-                    UsuarioId = "19BB7F593372433FB34300E75953D3A3",
+                    UsuarioId = "FD9CB11E-76D6-4DEE-AAA3-921E983F36CA",
                     Nombre = "Luna",
                     Genero = false,
                     Edad = 3,
