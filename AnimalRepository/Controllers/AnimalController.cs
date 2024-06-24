@@ -81,9 +81,9 @@ public class AnimalController : ControllerBase
     }
     [HttpGet]
     [ProducesResponseType(typeof(List<GetAnimalResponse>), 200)]
-    public async Task<IActionResult> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
+    public async Task<IActionResult> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId, string? localidad)
     {
-        var result = await _animalServices.GetListAnimal(nombre,peso,edad, genero, tipoId, razaId);
+        var result = await _animalServices.GetListAnimal(nombre,peso,edad, genero, tipoId, razaId, localidad);
         return new JsonResult(result) { StatusCode = 200 };
 
     }

@@ -100,9 +100,9 @@ public class AnimalServices : IAnimalServices
 
     }
 
-    public async Task<List<GetAnimalResponse>> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId)
+    public async Task<List<GetAnimalResponse>> GetListAnimal(string? nombre, decimal? peso, int? edad, bool? genero, int? tipoId, int? razaId, string? localidad)
     {
-        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimal(nombre, peso, edad, genero, tipoId, razaId));
+        return await _animalMapper.GetAllAnimalsResponse(await _animalQuery.GetListAnimal(nombre, peso, edad, genero, tipoId, razaId, localidad));
     }
 
 

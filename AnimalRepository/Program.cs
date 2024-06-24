@@ -2,11 +2,14 @@ using Application;
 using Application.IMappers;
 using Application.Interfaces;
 using Application.Interfaces.ICurrentUser;
+using Application.Interfaces.Services;
 using Application.Mappers;
 using Application.UseCases;
 using Infrastructure.Command;
 using Infrastructure.Persistence;
 using Infrastructure.Query;
+using Infrastructure.Services;
+using Infrastructure.Services.Http;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -16,7 +19,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -67,9 +69,20 @@ builder.Services.AddSwaggerGen(swagger =>
         }
     });
 });
+
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHttpClient<UserApiClient>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7054/");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+});
+
+
 var connectionString = builder.Configuration["ConnectionString"];
-builder.Services.AddDbContext<AnimalDbContext>(options => options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnimalRepository")));
+builder.Services.AddDbContext<AnimalDbContext>(options =>
+    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("AnimalRepository")));
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<IAnimalQuery, AnimalQuery>();
@@ -77,7 +90,7 @@ builder.Services.AddScoped<IAnimalCommand, AnimalCommand>();
 builder.Services.AddScoped<IAnimalServices, AnimalServices>();
 
 builder.Services.AddScoped<IAnimalRazaQuery, AnimalRazaQuery>();
-builder.Services.AddScoped<IAnimalRazaCommand,AnimalRazaCommand>();
+builder.Services.AddScoped<IAnimalRazaCommand, AnimalRazaCommand>();
 builder.Services.AddScoped<IAnimalRazaService, AnimalRazaService>();
 
 builder.Services.AddScoped<IAnimalTipoQuery, AnimalTipoQuery>();
@@ -91,8 +104,11 @@ builder.Services.AddScoped<IMediaServices, MediaServices>();
 builder.Services.AddScoped<IAnimalMapper, AnimalMapper>();
 builder.Services.AddScoped<IAnimalTipoMapper, AnimalTipoMapper>();
 builder.Services.AddScoped<IMediaMapper, MediaMapper>();
-builder.Services.AddScoped<IAnimalRazaMapper,AnimalRazaMapper>();
+builder.Services.AddScoped<IAnimalRazaMapper, AnimalRazaMapper>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
@@ -111,7 +127,7 @@ app.UseCors(policy =>
 });
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();
