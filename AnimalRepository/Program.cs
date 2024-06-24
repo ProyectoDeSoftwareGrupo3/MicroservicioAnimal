@@ -74,7 +74,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHttpClient<UserApiClient>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7054/");
+    client.BaseAddress = new Uri("https://localhost:7052/");
     client.DefaultRequestHeaders.Add("Accept", "application/json");
 });
 

@@ -1,4 +1,6 @@
-﻿namespace Application.Request;
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Application.Request;
 
 public class CreateAnimalRequest
 {
@@ -8,5 +10,6 @@ public class CreateAnimalRequest
         public int Edad {  get; set; }
         public decimal Peso { get; set; }
         public string Historia {  get; set; }
+        public IFormFile Foto { get; set; }
         
 }

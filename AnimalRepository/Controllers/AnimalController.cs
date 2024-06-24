@@ -1,4 +1,5 @@
-﻿using Application;
+﻿using System.Reflection;
+using Application;
 using Application.Exceptions;
 using Application.Interfaces.ICurrentUser;
 using Application.Request;
@@ -13,9 +14,12 @@ public class AnimalController : ControllerBase
 {
     private readonly IAnimalServices _animalServices;
 
-    public AnimalController(IAnimalServices animalServices)
+    private readonly IWebHostEnvironment _hostingEnvironment;
+
+    public AnimalController(IAnimalServices animalServices, IWebHostEnvironment hostingEnvironment)
     {
         _animalServices = animalServices;
+        _hostingEnvironment = hostingEnvironment;
     }
 
     [HttpPost]
@@ -26,7 +30,8 @@ public class AnimalController : ControllerBase
     {
         try
         {
-            var result =await _animalServices.CreateAnimal(request, currentUser.User.Id);
+            var imageUrl = await UploadImage(request.Foto);
+            var result = await _animalServices.CreateAnimal(request, currentUser.User.Id, imageUrl);
             return new JsonResult(result) { StatusCode = 201 };
         }
         catch (Conflict ex)
@@ -164,4 +169,29 @@ public class AnimalController : ControllerBase
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 401 };
         }
     }
+
+    [HttpPost("ImageUpload")]
+        public async Task<string> UploadImage(IFormFile imageFile)
+        {
+            if (imageFile == null || imageFile.Length == 0)
+            {
+                return "No se ha seleccionado una imagen";
+            }            
+            // string path = Environment.CurrentDirectory;     
+            string path = "../../FrontEnd/app/public";       
+            var uploadsFolder = Path.Combine(path, "pets");
+            Directory.CreateDirectory(uploadsFolder);
+
+            var uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
+            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(fileStream);
+            }                
+            string fileName = Path.GetFileName(filePath);     
+            var filePathForDb = Path.Combine("/pets", fileName);            
+
+            return filePathForDb;
+        }
 }

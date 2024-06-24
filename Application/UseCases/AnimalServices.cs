@@ -24,7 +24,7 @@ public class AnimalServices : IAnimalServices
         _mediaServices = mediaServices;
     }
 
-    public async Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request, string userId)
+    public async Task<GetAnimalResponse> CreateAnimal(CreateAnimalRequest request, string userId, string imageUrl)
     {
         try
         {
@@ -37,10 +37,16 @@ public class AnimalServices : IAnimalServices
                 Genero = request.Genero,
                 Edad = request.Edad,
                 Peso = request.Peso,
-                Historia = request.Historia
+                Historia = request.Historia,                
             };
             var result = await _animalCommand.CreateAnimal(animal);
-            return await _animalMapper.GetAnimalResponse(result);
+            CreateMediaRequest addMedia = new CreateMediaRequest
+            {
+                url = imageUrl,
+                AnimalId = result.Id
+            };
+            return await AddMedia(addMedia, userId);
+            // return await _animalMapper.GetAnimalResponse(result);
         }
         catch (Conflict e)
         {
