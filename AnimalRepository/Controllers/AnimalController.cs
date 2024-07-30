@@ -25,6 +25,7 @@ public class AnimalController : ControllerBase
     [HttpPost]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
+    [ProducesResponseType(typeof(ExceptionMessage), 404)]
     [Authorize]
     public async Task<IActionResult> CreateAnimal(CreateAnimalRequest request, [FromServices] ICurrentUserService currentUser)
     {
@@ -38,6 +39,10 @@ public class AnimalController : ControllerBase
         {
 
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 409 };
+        }
+        catch (ExceptionNotFound ex)
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
     }
     [HttpPut]

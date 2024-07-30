@@ -1,3 +1,4 @@
+using AnimalRepository;
 using Application;
 using Application.IMappers;
 using Application.Interfaces;
@@ -11,6 +12,7 @@ using Infrastructure.Query;
 using Infrastructure.Services;
 using Infrastructure.Services.Http;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -107,9 +109,8 @@ builder.Services.AddScoped<IMediaMapper, MediaMapper>();
 builder.Services.AddScoped<IAnimalRazaMapper, AnimalRazaMapper>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
-
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddScoped<ControllerBase, AnimalController>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

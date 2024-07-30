@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalRepository", "AnimalRepository\AnimalRepository.csproj", "{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalRepository", "AnimalRepository\AnimalRepository.csproj", "{2515ABC1-DF46-4C0E-BBD6-4C03E8F549B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{BF3C62F9-6EE3-4309-A6E2-5A7990F8B02A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8DFC7487-45B9-47C2-80DB-B34334D83C36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{8DFC7487-45B9-47C2-80DB-B34334D83C36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F6D981E3-F85D-4CE5-9956-A06D06A25557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{F6D981E3-F85D-4CE5-9956-A06D06A25557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalTesting", "AnimalTesting\AnimalTesting.csproj", "{5CA13740-2DF0-4015-8A05-A914E7A492C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F6D981E3-F85D-4CE5-9956-A06D06A25557}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D981E3-F85D-4CE5-9956-A06D06A25557}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D981E3-F85D-4CE5-9956-A06D06A25557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA13740-2DF0-4015-8A05-A914E7A492C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA13740-2DF0-4015-8A05-A914E7A492C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA13740-2DF0-4015-8A05-A914E7A492C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA13740-2DF0-4015-8A05-A914E7A492C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

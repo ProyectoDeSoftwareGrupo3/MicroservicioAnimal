@@ -37,7 +37,7 @@ public class AnimalServices : IAnimalServices
                 Genero = request.Genero,
                 Edad = request.Edad,
                 Peso = request.Peso,
-                Historia = request.Historia,                
+                Historia = request.Historia,
             };
             var result = await _animalCommand.CreateAnimal(animal);
             CreateMediaRequest addMedia = new CreateMediaRequest
@@ -51,6 +51,9 @@ public class AnimalServices : IAnimalServices
         catch (Conflict e)
         {
 
+            throw new Conflict(e.Message);
+        }
+        catch (ExceptionNotFound e) {
             throw new Conflict(e.Message);
         }
 
