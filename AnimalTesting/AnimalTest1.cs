@@ -28,7 +28,7 @@ namespace AnimalTesting
             _mockHostingEnvironment = new Mock<IWebHostEnvironment>();
 
             // Configuración del controlador con los mocks
-            _controller = new AnimalController(_mockAnimalServices.Object, _mockHostingEnvironment.Object);
+            _controller = new AnimalController(_mockAnimalServices.Object);
         }
 
         [Fact]

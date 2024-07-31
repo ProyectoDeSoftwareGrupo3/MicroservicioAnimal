@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Application;
+﻿using Application;
 using Application.Exceptions;
 using Application.Interfaces.ICurrentUser;
 using Application.Request;
@@ -10,17 +9,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace AnimalRepository;
 [Route("api/[controller]")]
 [ApiController]
-public class AnimalController : ControllerBase
+public class AnimalController(IAnimalServices animalServices) : ControllerBase
 {
-    private readonly IAnimalServices _animalServices;
-
-    private readonly IWebHostEnvironment _hostingEnvironment;
-
-    public AnimalController(IAnimalServices animalServices, IWebHostEnvironment hostingEnvironment)
-    {
-        _animalServices = animalServices;
-        _hostingEnvironment = hostingEnvironment;
-    }
+    private readonly IAnimalServices _animalServices = animalServices;
 
     [HttpPost]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
