@@ -130,4 +130,34 @@ public class CreateAnimalTests
         Assert.Equal(400, jsonResult.StatusCode);
     }
 
+    [Fact]
+    public async Task CreateAnimal_Returns400StatusCode_WhenPesoIsNegative()
+    {
+        // Arrange
+        var createAnimalRequest = new CreateAnimalRequest
+        {
+            RazaId = 1,
+            Nombre = "Max",
+            Genero = true,
+            Edad = 3,
+            Peso = -20.5m,
+            Historia = "Max fue rescatado de la calle y es muy amigable.",
+            Foto = new FormFile(null, 0, 0, null, "max.jpg")
+        };
+
+        var currentUser = new CurrentUser("b69b0c7e-ef99-4147-9232-85dcbfadc368", "Fabian Carlos");
+
+
+        _mockCurrentUserService.Setup(service => service.User).Returns(currentUser);
+        _mockAnimalServices.Setup(service => service.CreateAnimal(It.IsAny<CreateAnimalRequest>(), It.IsAny<string>(), It.IsAny<string>()))
+                           .ThrowsAsync(new BadRequest("Bad Request"));
+
+        // Act
+        var result = await _controller.CreateAnimal(createAnimalRequest, _mockCurrentUserService.Object);
+
+        // Assert
+        var jsonResult = Assert.IsType<JsonResult>(result);
+        Assert.Equal(400, jsonResult.StatusCode);
+    }
+
 }

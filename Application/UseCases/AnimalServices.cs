@@ -40,8 +40,8 @@ public class AnimalServices : IAnimalServices
                 Historia = request.Historia,
             };
 
-            if (animal.Edad < 0)
-                throw new BadRequest("Edad invalida");
+            if (animal.Edad < 0 || animal.Peso <= 0)
+                throw new BadRequest("datos invalidos");
 
             var result = await _animalCommand.CreateAnimal(animal);
             CreateMediaRequest addMedia = new CreateMediaRequest
