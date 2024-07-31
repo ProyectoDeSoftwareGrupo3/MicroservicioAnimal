@@ -39,6 +39,10 @@ public class AnimalServices : IAnimalServices
                 Peso = request.Peso,
                 Historia = request.Historia,
             };
+
+            if (animal.Edad < 0)
+                throw new BadRequest("Edad invalida");
+
             var result = await _animalCommand.CreateAnimal(animal);
             CreateMediaRequest addMedia = new CreateMediaRequest
             {
@@ -50,11 +54,15 @@ public class AnimalServices : IAnimalServices
         }
         catch (Conflict e)
         {
-
             throw new Conflict(e.Message);
         }
-        catch (ExceptionNotFound e) {
+        catch (ExceptionNotFound e)
+        {
             throw new Conflict(e.Message);
+        }
+        catch (BadRequest e) 
+        {
+            throw new BadRequest(e.Message);
         }
 
     }

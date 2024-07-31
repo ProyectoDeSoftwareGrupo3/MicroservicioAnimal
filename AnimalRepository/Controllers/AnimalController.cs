@@ -15,6 +15,7 @@ public class AnimalController(IAnimalServices animalServices) : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(GetAnimalResponse), 201)]
+    [ProducesResponseType(typeof(ExceptionMessage), 400)]
     [ProducesResponseType(typeof(ExceptionMessage), 409)]
     [ProducesResponseType(typeof(ExceptionMessage), 404)]
     [Authorize]
@@ -35,6 +36,10 @@ public class AnimalController(IAnimalServices animalServices) : ControllerBase
         {
             return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 404 };
         }
+        catch (BadRequest ex) 
+        {
+            return new JsonResult(new ExceptionMessage { Message = ex.Message }) { StatusCode = 400 };
+        }
     }
     [HttpPut]
     [ProducesResponseType(typeof(GetAnimalResponse), 200)]
@@ -46,7 +51,7 @@ public class AnimalController(IAnimalServices animalServices) : ControllerBase
         try
         {
             var result = await _animalServices.UpdateAnimal(request, currentUser.User.Id);
-            return new JsonResult(result) { StatusCode = 201 };
+            return new JsonResult(result) { StatusCode = 200 };
         }
         catch (ExceptionNotFound ex)
         {
